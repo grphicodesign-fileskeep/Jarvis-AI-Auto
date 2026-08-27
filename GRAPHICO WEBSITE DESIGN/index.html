@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRAPHICO — Digital Marketing &amp; High-Efficiency Growth Agency</title>
+  <meta name="description" content="Graphico architects digital growth through world-class website engineering, scalable applications, and high-efficiency marketing automations.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/graphico-g-logo.png">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       PERSISTENT FLUID CANVAS BACKGROUND (60 FPS HARDWARE-ACCELERATED)
+       ========================================================================== -->
+  <canvas id="fluidCanvas"></canvas>
+
+  <!-- ==========================================================================
+       APP CONTAINER
+       ========================================================================== -->
+  <div class="app-container">
+
+    <!-- FIXED TOP NAVBAR -->
+    <header class="site-header">
+      <nav class="nav-glass-bar">
+        
+        <!-- Left: Geometric G Icon + Wordmark -->
+        <a href="#home" class="brand-identity" data-route="home">
+          <div class="brand-g-icon">
+            <img src="assets/graphico-g-logo.png" alt="Graphico Emblem">
+          </div>
+          <img src="assets/graphico-wordmark.png" alt="GRAPHICO" class="brand-wordmark-img">
+        </a>
+
+        <!-- Center: Navigation Links -->
+        <ul class="nav-menu-links">
+          <li><a href="#home" class="nav-link active" data-route="home">Home</a></li>
+          <li><a href="#pricing" class="nav-link" data-route="pricing">Pricing</a></li>
+          <li><a href="#portfolio" class="nav-link" data-route="portfolio">Portfolio</a></li>
+          <li><a href="#about" class="nav-link" data-route="about">About</a></li>
+        </ul>
+
+        <!-- Right: Action Button -->
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <a href="#about" class="btn-proposal-pill" data-route="about">
+            <span>Get a Proposal</span>
+            <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem;"></i>
+          </a>
+        </div>
+
+      </nav>
+    </header>
+
+    <!-- ==========================================================================
+         MAIN STAGE: SPA PAGES ROUTER
+         ========================================================================== -->
+    <main class="main-stage">
+
+      <!-- ======================================================================
+           PAGE 1: HOME (THE HIGH-IMPACT ENTRY)
+           ====================================================================== -->
+      <section class="page-view active" id="page-home">
+        
+        <!-- HERO SECTION -->
+        <div class="hero-stage">
+          
+          <!-- Pill Badge -->
+          <div class="hero-pill-badge">
+            <span class="hero-pill-dot"></span>
+            <span>High-Efficiency Growth Architecture</span>
+          </div>
+
+          <!-- Massive Headline -->
+          <h1 class="hero-massive-headline">
+            We Architect<br>Digital Growth.
+          </h1>
+
+          <!-- Subtext -->
+          <p class="hero-subtext">
+            Graphico engineers bespoke web ecosystems, high-performance web apps, and intelligent marketing automations that accelerate enterprise revenue.
+          </p>
+
+          <!-- CTA Actions -->
+          <div class="hero-cta-actions">
+            <a href="#pricing" class="btn-hero-primary" data-route="pricing">
+              View Solutions &amp; Pricing
+            </a>
+            <a href="#portfolio" class="btn-hero-glass" data-route="portfolio">
+              Explore Case Studies
+            </a>
+          </div>
+
+          <!-- Floating Faux Analytics Glass Card 1 (Left) -->
+          <div class="hero-floating-card hero-card-left liquid-glass">
+            <div class="card-stat-header">
+              <span class="card-stat-title">Organic Traffic</span>
+              <span class="card-stat-pill">+284%</span>
+            </div>
+            <div class="card-stat-number">142.8k</div>
+            <svg class="card-stat-svg" viewBox="0 0 200 40">
+              <defs>
+                <linearGradient id="chartGrad1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#34D399" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#34D399" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,35 Q30,30 60,20 T120,18 T160,8 T200,4 L200,40 L0,40 Z" fill="url(#chartGrad1)" />
+              <path d="M0,35 Q30,30 60,20 T120,18 T160,8 T200,4" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <!-- Floating Faux Analytics Glass Card 2 (Right) -->
+          <div class="hero-floating-card hero-card-right liquid-glass">
+            <div class="card-stat-header">
+              <span class="card-stat-title">Revenue Pipeline</span>
+              <span class="card-stat-pill">+₱4.2M</span>
+            </div>
+            <div class="card-stat-number">₱8,940,000</div>
+            <svg class="card-stat-svg" viewBox="0 0 200 40">
+              <defs>
+                <linearGradient id="chartGrad2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,38 Q40,32 80,24 T140,12 T200,2 L200,40 L0,40 Z" fill="url(#chartGrad2)" />
+              <path d="M0,38 Q40,32 80,24 T140,12 T200,2" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- INFINITE CLIENT PARTNER MARQUEE -->
+        <div class="marquee-container">
+          <div class="marquee-track" id="marqueeTrack">
+            <span class="marquee-item"><i class="fa-brands fa-figma"></i> FIGMA</span>
+            <span class="marquee-item"><i class="fa-brands fa-aws"></i> AMAZON WEB SERVICES</span>
+            <span class="marquee-item"><i class="fa-brands fa-stripe"></i> STRIPE</span>
+            <span class="marquee-item"><i class="fa-brands fa-github"></i> GITHUB</span>
+            <span class="marquee-item"><i class="fa-brands fa-react"></i> REACT ECOSYSTEM</span>
+            <span class="marquee-item"><i class="fa-solid fa-cloud"></i> NETLIFY</span>
+            <span class="marquee-item"><i class="fa-brands fa-node-js"></i> NODE ARCHITECTURE</span>
+            <span class="marquee-item"><i class="fa-solid fa-shield-halved"></i> CLOUDFLARE</span>
+          </div>
+        </div>
+
+        <!-- SERVICES TEASER GRID -->
+        <div class="section-header-block">
+          <div class="section-eyebrow">Pillars of Execution</div>
+          <h2 class="section-title">Core Capabilities Engineered for Scale</h2>
+          <p class="section-desc">
+            We merge design artistry with technical precision to build digital experiences that convert attention into sustainable enterprise revenue.
+          </p>
+        </div>
+
+        <div class="services-grid-3col">
+          
+          <!-- Service Card 1 -->
+          <div class="service-glass-card liquid-glass liquid-glass-spotlight">
+            <div>
+              <div class="service-icon-box">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="service-card-num">01 / ENGINEERING</div>
+              <h3 class="service-card-title">Web &amp; Application Development</h3>
+              <p class="service-card-text">
+                Full-stack web architectures, progressive mobile applications, and high-speed JAMstack platforms engineered with sub-second response times and hardware-accelerated fluid motion.
+              </p>
+            </div>
+            <div class="service-tags-row">
+              <span class="service-mini-tag">Next.js</span>
+              <span class="service-mini-tag">React</span>
+              <span class="service-mini-tag">TypeScript</span>
+              <span class="service-mini-tag">60 FPS GSAP</span>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-glass-card liquid-glass liquid-glass-spotlight">
+            <div>
+              <div class="service-icon-box">
+                <i class="fa-solid fa-bolt-lightning"></i>
+              </div>
+              <div class="service-card-num">02 / AUTOMATION</div>
+              <h3 class="service-card-title">SEO &amp; Autonomous Workflows</h3>
+              <p class="service-card-text">
+                Multi-channel SEO checklists, custom-trained AI chatbots, automated client acquisition funnels, and autonomous n8n workflows that save hundreds of operational hours monthly.
+              </p>
+            </div>
+            <div class="service-tags-row">
+              <span class="service-mini-tag">Local SEO</span>
+              <span class="service-mini-tag">AI Chatbots</span>
+              <span class="service-mini-tag">n8n Automation</span>
+              <span class="service-mini-tag">Lead Funnels</span>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-glass-card liquid-glass liquid-glass-spotlight">
+            <div>
+              <div class="service-icon-box">
+                <i class="fa-solid fa-shapes"></i>
+              </div>
+              <div class="service-card-num">03 / BRANDING</div>
+              <h3 class="service-card-title">Brand Identity &amp; 3D Systems</h3>
+              <p class="service-card-text">
+                Cohesive visual design languages, 3D architectural signage, luxury packaging design, and interactive design systems built to elevate authority and command premium pricing.
+              </p>
+            </div>
+            <div class="service-tags-row">
+              <span class="service-mini-tag">Liquid Glass</span>
+              <span class="service-mini-tag">3D Signage</span>
+              <span class="service-mini-tag">Vector Systems</span>
+              <span class="service-mini-tag">Packaging</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ======================================================================
+           PAGE 2: PRICING (THE TIERED CONVERSION ENGINE)
+           ====================================================================== -->
+      <section class="page-view" id="page-pricing">
+        
+        <!-- HEADER BLOCK WITH ASTERISK -->
+        <div class="pricing-header-wrap">
+          <div class="pricing-header-top">
+            <div>
+              <div class="brand-identity" style="margin-bottom: 1.25rem;">
+                <img src="assets/graphico-wordmark.png" alt="GRAPHICO" style="height: 20px;">
+              </div>
+              <h1 class="pricing-main-heading">
+                Crafting the<br>Perfect Solution
+              </h1>
+              <p class="pricing-main-subtext">
+                We specialize in high-efficiency digital marketing strategies. Our team of experts is highly trained and experienced in both Mobile App and Website Development. For us, delivering excellence is second nature.
+              </p>
+            </div>
+
+            <!-- Geometric 3D Asterisk Decor -->
+            <svg class="pricing-asterisk-decor" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="50" y1="5" x2="50" y2="95" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+              <line x1="5" y1="50" x2="95" y2="50" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+              <line x1="18" y1="18" x2="82" y2="82" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+              <line x1="18" y1="82" x2="82" y2="18" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+              <line x1="32" y1="8" x2="68" y2="92" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="8" y1="32" x2="92" y2="68" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- THE 5-COLUMN ASCENDING TIERED GRID (EXACT TO REFERENCE) -->
+        <div class="pricing-tiered-grid">
+
+          <!-- TIER 1: STARTER PACKAGES -->
+          <div class="pricing-card pricing-card-1 liquid-glass liquid-glass-spotlight">
+            <div>
+              <div class="pricing-pill-header">
+                <div class="pricing-tier-title">Starter Packages</div>
+                <div class="pricing-tier-desc">Ideal for personal brands, landing pages or "Coming Soon" sites.</div>
+              </div>
+              
+              <ul class="pricing-feature-list">
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>1 Landing Page (Full Scroll)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>WhatsApp/Messenger Integration (Direct chat button)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Basic Branding (Selection of primary fonts and colors)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Domain + Hosting Included</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fully Mobile Responsive</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pricing-card-footer">
+              <div class="pricing-price-row">
+                <div class="pricing-amount">₱15,000</div>
+                <div class="pricing-maintenance">₱1,500/month<br>for maintenance</div>
+              </div>
+              <a href="#about" class="btn-select-tier" data-route="about">Select Starter</a>
+            </div>
+          </div>
+
+          <!-- TIER 2: BASIC PACKAGES -->
+          <div class="pricing-card pricing-card-2 liquid-glass liquid-glass-spotlight">
+            <div>
+              <div class="pricing-pill-header">
+                <div class="pricing-tier-title">Basic Packages</div>
+                <div class="pricing-tier-desc">The "Get Started" choice for local businesses needing a multi-page presence.</div>
+              </div>
+
+              <ul class="pricing-feature-list">
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Up to 3 Pages (Home, Services, Contact)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>WhatsApp/Messenger Integration (Direct chat button)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Local SEO Checklist: Keyword optimization for your specific city (e.g. "Salon in Baguio")</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Domain + Hosting Included</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fully Mobile Responsive</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Basic Copywriting (Professional editing of your provided text)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pricing-card-footer">
+              <div class="pricing-price-row">
+                <div class="pricing-amount">₱30,000</div>
+                <div class="pricing-maintenance">₱2,000/month<br>for maintenance</div>
+              </div>
+              <a href="#about" class="btn-select-tier" data-route="about">Select Basic</a>
+            </div>
+          </div>
+
+          <!-- TIER 3: STANDARD PACKAGE -->
+          <div class="pricing-card pricing-card-3 liquid-glass liquid-glass-spotlight">
+            <div>
+              <div class="pricing-pill-header">
+                <div class="pricing-tier-title">Standard Package</div>
+                <div class="pricing-tier-desc">Ideal for businesses taking their first step online</div>
+              </div>
+
+              <ul class="pricing-feature-list">
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>3 Pages (Landing + Booking + 2 Add'l Pages)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>WhatsApp/Messenger Integration (Direct chat button)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Local SEO Checklist: Keyword optimization for your specific city (e.g. "Salon in Manila")</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Domain + Hosting Included</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fully Mobile Responsive</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Basic Copywriting (Professional editing of your provided text)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Social Media Kit (1 post per day - custom banner for FB/LinkedIn)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Google Maps Integration</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pricing-card-footer">
+              <div class="pricing-price-row">
+                <div class="pricing-amount">₱50,000</div>
+                <div class="pricing-maintenance">₱3,000/month<br>for maintenance</div>
+              </div>
+              <a href="#about" class="btn-select-tier" data-route="about">Select Standard</a>
+            </div>
+          </div>
+
+          <!-- TIER 4: EXCLUSIVE PACKAGE -->
+          <div class="pricing-card pricing-card-4 liquid-glass liquid-glass-spotlight">
+            <div>
+              <div class="pricing-pill-header">
+                <div class="pricing-tier-title">Exclusive Package</div>
+                <div class="pricing-tier-desc">Boost Growth powered by VA, SEO, and Socials.</div>
+              </div>
+
+              <ul class="pricing-feature-list">
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>AI Virtual Assistant (Daily, 7 Days per week - Full Service, Weekends Included)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>4 keywords SEO</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>5 Social Media Post per Day (on working days)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>SSL + Domain + Hosting Included</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fully Mobile Responsive</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>3 Pages (Landing + Booking + 2 Add'l Pages)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fully Custom Design</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>WhatsApp/Messenger Integration (Direct chat button)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Blog/Article Setup (2 professionally written SEO articles to start)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pricing-card-footer">
+              <div class="pricing-price-row">
+                <div class="pricing-amount">₱115,000</div>
+                <div class="pricing-maintenance">₱3,500/month<br>for maintenance</div>
+              </div>
+              <a href="#about" class="btn-select-tier" data-route="about">Select Exclusive</a>
+            </div>
+          </div>
+
+          <!-- TIER 5: PREMIUM / CUSTOM PACKAGE -->
+          <div class="pricing-card pricing-card-5 liquid-glass liquid-glass-spotlight">
+            <div>
+              <div class="pricing-pill-header" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.35);">
+                <div class="pricing-tier-title">Premium / Custom</div>
+                <div class="pricing-tier-desc">The Ultimate All-in-one Enterprise solution.</div>
+              </div>
+
+              <ul class="pricing-feature-list">
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>AI Powered Automation &amp; Support (Custom-Trained AI Chatbot)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fully Custom Designs / 3D UI Elements</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>5 Pages (Landing + Booking + 2 Add'l Pages)</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Advanced SEO + Dedicated / Managed Cloud Hosting</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>4 Social Media Post per Day Weekends Included</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>SSL + Domain + Hosting Included Professional Copywriting</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>10-15 pages of high-conversion sales copy written by a human (AI-assisted).</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Micro-Interaction Design Smooth Animation</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Fully Mobile Responsive</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Google Maps Integration</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg class="pricing-check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>WhatsApp/Messenger Integration (Direct chat button)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pricing-card-footer">
+              <div class="pricing-price-row">
+                <div class="pricing-amount">₱250,000</div>
+                <div class="pricing-maintenance">₱5,000/month<br>for maintenance</div>
+              </div>
+              <a href="#about" class="btn-select-tier" style="background:#FFFFFF; color:#000000; font-weight:800;" data-route="about">Claim Premium</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PRICING FAQ ACCORDION -->
+        <div class="section-header-block">
+          <div class="section-eyebrow">Clarity &amp; Execution</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-accordion-wrap">
+          
+          <div class="faq-glass-bar liquid-glass">
+            <button class="faq-question-btn">
+              <span>What is covered under the monthly maintenance fee?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer-content">
+              Maintenance encompasses dedicated cloud server monitoring, SSL certificate renewals, routine automated security patch updates, content refreshes, database backups, and direct technical support to keep your properties running flawlessly.
+            </div>
+          </div>
+
+          <div class="faq-glass-bar liquid-glass">
+            <button class="faq-question-btn">
+              <span>How fast will our bespoke website or application launch?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer-content">
+              Starter and Basic packages typically launch within 7–14 days. Standard and Exclusive packages range from 2–4 weeks. Premium/Custom enterprise builds with custom AI chatbots and 3D animations are completed in 4–6 weeks.
+            </div>
+          </div>
+
+          <div class="faq-glass-bar liquid-glass">
+            <button class="faq-question-btn">
+              <span>Can we upgrade or customize features as our company scales?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer-content">
+              Yes. All Graphico software architectures are modular. You can easily scale from Starter to Exclusive or add custom integrations (e.g. Stripe checkout, custom booking systems, CRM synching) at any time.
+            </div>
+          </div>
+
+          <div class="faq-glass-bar liquid-glass">
+            <button class="faq-question-btn">
+              <span>What is your revision and design approval workflow?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer-content">
+              We provide interactive Figma design prototypes and staging URLs prior to final code compilation, ensuring zero translation loss and complete alignment before deployment.
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ======================================================================
+           PAGE 3: PORTFOLIO (THE CASE STUDY VAULT)
+           ====================================================================== -->
+      <section class="page-view" id="page-portfolio">
+        
+        <div class="section-header-block">
+          <div class="section-eyebrow">The Proof of Excellence</div>
+          <h1 class="section-title">Work That Drives Revenue.</h1>
+          <p class="section-desc">
+            Explore recent projects where architecture, high-end visual fidelity, and conversion copywriting merged to deliver measurable market impact.
+          </p>
+        </div>
+
+        <!-- STAGGERED MASONRY GRID -->
+        <div class="portfolio-masonry-grid">
+          
+          <!-- Card 1: Aviator Store -->
+          <div class="portfolio-vault-card liquid-glass">
+            <div class="portfolio-card-media">
+              <img src="assets/portfolio/aviator-store.png" alt="The Aviator Store E-Commerce Merchandising">
+            </div>
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-overlay-header">
+                <h3 class="portfolio-project-title">The Aviator Store</h3>
+                <span class="portfolio-view-link">Case Study ➔</span>
+              </div>
+              <div class="portfolio-stack-pills">
+                <span class="portfolio-stack-badge">E-Commerce</span>
+                <span class="portfolio-stack-badge">Brand Merchandising</span>
+                <span class="portfolio-stack-badge">Shopify Plus</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Brayne Digital -->
+          <div class="portfolio-vault-card liquid-glass">
+            <div class="portfolio-card-media">
+              <img src="assets/portfolio/brayne-digital.jpg" alt="Brayne Digital Agency Architecture">
+            </div>
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-overlay-header">
+                <h3 class="portfolio-project-title">Brayne Digital</h3>
+                <span class="portfolio-view-link">Case Study ➔</span>
+              </div>
+              <div class="portfolio-stack-pills">
+                <span class="portfolio-stack-badge">Agency Systems</span>
+                <span class="portfolio-stack-badge">Architectural Signage</span>
+                <span class="portfolio-stack-badge">Full-Stack</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: DJ Ace Galera -->
+          <div class="portfolio-vault-card liquid-glass">
+            <div class="portfolio-card-media">
+              <img src="assets/portfolio/dj-ace-galera.jpg" alt="DJ Ace Galera Digital Platform">
+            </div>
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-overlay-header">
+                <h3 class="portfolio-project-title">DJ Ace Galera Tour Hub</h3>
+                <span class="portfolio-view-link">Case Study ➔</span>
+              </div>
+              <div class="portfolio-stack-pills">
+                <span class="portfolio-stack-badge">Music Platform</span>
+                <span class="portfolio-stack-badge">Tour Engine</span>
+                <span class="portfolio-stack-badge">Fluid UI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Crystal White Claw -->
+          <div class="portfolio-vault-card liquid-glass">
+            <div class="portfolio-card-media">
+              <img src="assets/portfolio/crystal-white-claw.jpg" alt="Crystal White Claw Luxury Packaging">
+            </div>
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-overlay-header">
+                <h3 class="portfolio-project-title">Crystal White Claw</h3>
+                <span class="portfolio-view-link">Case Study ➔</span>
+              </div>
+              <div class="portfolio-stack-pills">
+                <span class="portfolio-stack-badge">Luxury Packaging</span>
+                <span class="portfolio-stack-badge">360° Identity</span>
+                <span class="portfolio-stack-badge">Acrylic Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Qonek App -->
+          <div class="portfolio-vault-card liquid-glass">
+            <div class="portfolio-card-media">
+              <img src="assets/portfolio/qonek-app.jpg" alt="Qonek Social & Audio App">
+            </div>
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-overlay-header">
+                <h3 class="portfolio-project-title">Qonek Social &amp; Audio</h3>
+                <span class="portfolio-view-link">Case Study ➔</span>
+              </div>
+              <div class="portfolio-stack-pills">
+                <span class="portfolio-stack-badge">React Native</span>
+                <span class="portfolio-stack-badge">WebRTC Voice</span>
+                <span class="portfolio-stack-badge">Mobile Interface</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Estilo Salon -->
+          <div class="portfolio-vault-card liquid-glass">
+            <div class="portfolio-card-media">
+              <img src="assets/portfolio/estilo-salon.jpg" alt="Estilo Salon Booking System">
+            </div>
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-overlay-header">
+                <h3 class="portfolio-project-title">Estilo Haute Coiffure</h3>
+                <span class="portfolio-view-link">Case Study ➔</span>
+              </div>
+              <div class="portfolio-stack-pills">
+                <span class="portfolio-stack-badge">Booking Engine</span>
+                <span class="portfolio-stack-badge">Local SEO</span>
+                <span class="portfolio-stack-badge">Direct WhatsApp</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ======================================================================
+           PAGE 4: ABOUT & CONTACT (THE AGENCY CORE)
+           ====================================================================== -->
+      <section class="page-view" id="page-about">
+        
+        <!-- MISSION STATEMENT: SPLIT TYPOGRAPHY STAGE -->
+        <div class="about-split-stage">
+          <div class="about-split-left">
+            <h2>Excellence is<br>second nature.</h2>
+          </div>
+          <div class="about-split-right">
+            <p>
+              Graphico was built on the belief that digital marketing and software development should never exist in separate silos. High-converting campaigns require peerless visual aesthetics, and flawless software architecture demands an instinctive understanding of human behavior.
+            </p>
+            <p>
+              We operate as an agile engineering and marketing unit. We eliminate administrative bureaucracy, focusing purely on measurable velocity: higher conversion rates, lower acquisition costs, and digital assets that make customers stop and admire.
+            </p>
+          </div>
+        </div>
+
+        <!-- THE TEAM / LEADERSHIP: GSAP HORIZONTAL SCROLL TRACK -->
+        <div class="team-section-wrap">
+          <div class="section-header-block" style="text-align: left; margin-bottom: 2rem;">
+            <div class="section-eyebrow">Collective Intelligence</div>
+            <h2 class="section-title">Leadership &amp; Execution Squad</h2>
+          </div>
+
+          <div class="team-scroll-track" id="teamScrollTrack">
+            
+            <!-- Member 1 -->
+            <div class="team-glass-card liquid-glass">
+              <div class="team-portrait-wrap">
+                <img src="assets/team/team-1.jpg" alt="Benyamin Namtalashvili">
+              </div>
+              <div class="team-name">Benyamin Namtalashvili</div>
+              <div class="team-role">Founder &amp; Principal Systems Architect</div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="team-glass-card liquid-glass">
+              <div class="team-portrait-wrap">
+                <img src="assets/team/team-2.jpg" alt="Creative Director">
+              </div>
+              <div class="team-name">Julian Vance</div>
+              <div class="team-role">Head of Motion &amp; 3D Visual Systems</div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="team-glass-card liquid-glass">
+              <div class="team-portrait-wrap">
+                <img src="assets/team/team-3.jpg" alt="Head of Growth">
+              </div>
+              <div class="team-name">Sophia Sterling</div>
+              <div class="team-role">Lead Marketing Strategist &amp; Funnels</div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="team-glass-card liquid-glass">
+              <div class="team-portrait-wrap">
+                <img src="assets/team/team-4.jpg" alt="Automation Engineer">
+              </div>
+              <div class="team-name">Marcus Bennett</div>
+              <div class="team-role">AI Integrations &amp; Automation Lead</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROPOSAL BRIEF & INQUIRY PANEL -->
+        <div class="proposal-panel-grid liquid-glass" id="proposalSection">
+          
+          <div class="proposal-contact-info">
+            <div class="hero-pill-badge" style="margin-bottom: 1.25rem;">
+              <span class="hero-pill-dot"></span>
+              <span>Available for Immediate Deployment</span>
+            </div>
+            <h3>Let's Build Something Exceptional</h3>
+            <p>
+              Whether you require a high-converting web architecture, an autonomous client acquisition engine, or a complete brand overhaul, Graphico delivers with surgical precision.
+            </p>
+
+            <div class="contact-meta-row">
+              <a href="mailto:benyaminnamtalashvili726@gmail.com" class="contact-meta-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>benyaminnamtalashvili726@gmail.com</span>
+              </a>
+              <a href="https://wa.me/639454836568" target="_blank" rel="noopener noreferrer" class="contact-meta-item">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>+63 945 483 6568 (Direct WhatsApp)</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="proposal-form" id="graphicoProposalForm">
+            <div class="form-group-custom">
+              <label class="form-label-glass">Your Name / Organization</label>
+              <input type="text" class="form-input-glass" placeholder="e.g. Elena Rostova / Apex Venture Studio" required>
+            </div>
+
+            <div class="form-group-custom">
+              <label class="form-label-glass">Business Email</label>
+              <input type="email" class="form-input-glass" placeholder="elena@apex.io" required>
+            </div>
+
+            <div class="form-group-custom">
+              <label class="form-label-glass">Target Package / Scope</label>
+              <select class="form-select-glass" required>
+                <option value="Starter">Starter Package (₱15,000)</option>
+                <option value="Basic">Basic Package (₱30,000)</option>
+                <option value="Standard" selected>Standard Package (₱50,000)</option>
+                <option value="Exclusive">Exclusive Package (₱115,000)</option>
+                <option value="Premium">Premium / Custom Enterprise (₱250,000)</option>
+                <option value="Custom">Custom Scope / Retainer</option>
+              </select>
+            </div>
+
+            <div class="form-group-custom">
+              <label class="form-label-glass">Project Objectives &amp; Timeline</label>
+              <textarea class="form-textarea-glass" placeholder="Detail your core business objectives, desired launch target, and any specific technical requirements..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-proposal-pill" style="justify-content: center; width: 100%; padding: 0.95rem; font-size: 0.95rem; margin-top: 0.5rem;">
+              <span>Submit Project Proposal Request</span>
+              <i class="fa-solid fa-paper-plane" style="font-size: 0.85rem;"></i>
+            </button>
+          </form>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- ==========================================================================
+         GLOBAL COLOPHON FOOTER (MASSIVE ANCHORED GLASS PANEL)
+         ========================================================================== -->
+    <footer class="global-footer-glass liquid-glass">
+      
+      <div class="footer-columns-grid">
+        
+        <!-- Col 1: Brand -->
+        <div class="footer-brand-summary">
+          <div class="brand-identity">
+            <div class="brand-g-icon">
+              <img src="assets/graphico-g-logo.png" alt="Graphico Emblem">
+            </div>
+            <img src="assets/graphico-wordmark.png" alt="GRAPHICO" class="brand-wordmark-img">
+          </div>
+          <p>
+            Architecting digital growth through hyper-efficient marketing, bespoke software engineering, and liquid glass aesthetics.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#home" data-route="home">Home</a></li>
+            <li class="footer-link-item"><a href="#pricing" data-route="pricing">Pricing &amp; Packages</a></li>
+            <li class="footer-link-item"><a href="#portfolio" data-route="portfolio">Portfolio Vault</a></li>
+            <li class="footer-link-item"><a href="#about" data-route="about">About &amp; Leadership</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Capabilities -->
+        <div>
+          <div class="footer-col-title">Solutions</div>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#pricing" data-route="pricing">Mobile &amp; Web Apps</a></li>
+            <li class="footer-link-item"><a href="#pricing" data-route="pricing">SEO Optimization</a></li>
+            <li class="footer-link-item"><a href="#pricing" data-route="pricing">AI Virtual Assistants</a></li>
+            <li class="footer-link-item"><a href="#pricing" data-route="pricing">Managed Cloud Hosting</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Channels -->
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="https://wa.me/639454836568" target="_blank" rel="noopener noreferrer">WhatsApp Direct</a></li>
+            <li class="footer-link-item"><a href="mailto:benyaminnamtalashvili726@gmail.com">Direct Email</a></li>
+            <li class="footer-link-item"><a href="https://github.com/Senyuuuuuu" target="_blank" rel="noopener noreferrer">GitHub Workspace</a></li>
+            <li class="footer-link-item"><a href="#about" data-route="about">Request Proposal</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM COLOPHON -->
+      <div class="footer-bottom-colophon">
+        <div>&copy; 2026 GRAPHICO | ALL RIGHTS RESERVED</div>
+        <div>engineered by Benyamin Namtalashvili</div>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- Application Logic & Fluid Engine -->
+  <script src="fluid-engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
