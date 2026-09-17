@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dentacure">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions (FAQ) — DentaCure Dental Clinic La Union</title>
+  <meta name="description" content="Find answers to common questions about dental braces, pediatric care, clinic hours, 5:00 PM cut-off, pricing, and directions to DentaCure Dental Clinic in Sevilla, San Fernando City.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              green: '#37542B',
+              olive: '#4E7837',
+              sage: '#82A769',
+              blue: '#178782', // Replaced blue with Video Oceanic Teal
+              teal: '#178782',
+              aqua: '#229891',
+              mint: '#6DC4C4',
+              dark: '#1A1A1A',
+              cardDark: '#242424',
+              cream: '#FAF9F5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased selection:bg-neutral-200 min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================================================= -->
+  <!-- 1. STICKY TOP NAVIGATION BAR                                              -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div id="navbar-logo-icon" class="flex items-center justify-center transition-transform group-hover:scale-105">
+          <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+        </div>
+      </a>
+
+      <!-- Centered Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-600">
+        <a href="index.html" class="nav-link hover:text-neutral-900 transition">Home</a>
+        <a href="services.html" class="nav-link hover:text-neutral-900 transition">Our Services</a>
+        <a href="dentists.html" class="nav-link hover:text-neutral-900 transition">Our Dentists</a>
+        <a href="before-after.html" class="nav-link hover:text-neutral-900 transition">Before &amp; After</a>
+        <a href="reviews.html" class="nav-link hover:text-neutral-900 transition">Reviews</a>
+        <a href="faq.html" class="nav-link text-neutral-900 font-bold border-b-2 border-[#5F8239] pb-1">FAQ</a>
+        <a href="directions.html" class="nav-link hover:text-neutral-900 flex items-center gap-1 font-semibold text-[#5F8239]">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Directions</span>
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <button id="theme-toggle-btn" 
+          class="hidden sm:flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 transition shadow-sm"
+          title="Toggle Theme">
+          <span class="w-2 h-2 rounded-full theme-accent-bg animate-pulse"></span>
+          <span id="theme-current-label">🌿 DentaCure Green</span>
+        </button>
+
+        <a href="booking.html" class="btn-pill-primary px-6 py-2.5 text-sm font-semibold tracking-wide inline-flex items-center justify-center">
+          Book Online
+        </a>
+
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-neutral-100 bg-white px-6 py-4 space-y-3 shadow-xl">
+      <a href="index.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Home</a>
+      <a href="services.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Services</a>
+      <a href="dentists.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Dentists</a>
+      <a href="before-after.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Before &amp; After Transformations</a>
+      <a href="reviews.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Patient Reviews</a>
+      <a href="faq.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">FAQ</a>
+      <a href="directions.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">📍 Google Map &amp; Directions</a>
+      <a href="booking.html" class="mobile-nav-link block text-base font-bold text-neutral-900 bg-[#EBF3E4] px-3 py-2 rounded-xl">📅 Book Appointment Online</a>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO HEADER & SEARCH INPUT                                             -->
+  <!-- ========================================================================= -->
+  <section class="relative pt-12 pb-14 bg-gradient-to-b from-[#FAF9F5] to-white border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-neutral-400 mb-4 uppercase tracking-wider">
+        <a href="index.html" class="hover:text-neutral-700 transition">Home</a>
+        <span>/</span>
+        <span class="theme-accent">Patient Help Center</span>
+      </nav>
+
+      <div class="max-w-3xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3E4] border border-[#D5E6CA] text-[#426123] text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Knowledge &amp; Treatment Answers</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-[58px] font-extrabold tracking-tight text-neutral-900 leading-[1.12]">
+          Frequently Asked Questions
+        </h1>
+        <p class="text-neutral-500 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+          Everything you need to know about our dental procedures, clinic schedule in Sevilla, 5:00 PM cut-off, installment plans, and sterile clinical standards.
+        </p>
+
+        <!-- Live FAQ Search Filter Bar -->
+        <div class="pt-2 relative max-w-xl">
+          <div class="relative">
+            <i data-lucide="search" class="w-5 h-5 text-neutral-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+            <input 
+              type="text" 
+              id="faq-search-input" 
+              placeholder="Search questions (e.g. braces, hours, parking, price)..." 
+              class="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-neutral-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#5F8239] shadow-sm font-medium"
+            >
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. ORGANIZED 12-QUESTION FAQ ACCORDIONS                                    -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Category 1: General & Appointments -->
+      <div class="space-y-4 faq-category-block">
+        <div class="flex items-center gap-2 pb-2 border-b border-neutral-200">
+          <i data-lucide="calendar" class="w-4 h-4 text-[#5F8239]"></i>
+          <h2 class="text-lg font-bold text-neutral-900 uppercase tracking-wide">1. Appointments &amp; Clinic Hours</h2>
+        </div>
+
+        <!-- FAQ 1 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>What are your operating hours and what is the daily cut-off time?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              Our official operating hours are:
+            </p>
+            <ul class="list-disc list-inside space-y-1 my-2 text-neutral-700 font-medium">
+              <li><strong>Monday to Saturday:</strong> 9:00 AM – 5:30 PM</li>
+              <li><strong>Sunday:</strong> 1:00 PM – 5:00 PM</li>
+            </ul>
+            <p>
+              Please take note that our <strong>daily cut-off for both pre-booked patients and walk-ins is strictly 5:00 PM</strong> to ensure adequate time for comprehensive clinical procedures and multi-stage operatory disinfection.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>Do you accept walk-in patients or is booking mandatory?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              We warmly accommodate walk-in patients whenever operatory chairs are available. However, to guarantee zero waiting time and ensure you can consult with your preferred doctor (Dr. Micah Redilla or Dr. Pauline Trinidad), we strongly advise booking via our website or texting us ahead at <strong>(0976) 485 7648</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>How much is an initial consultation checkup?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              Initial comprehensive oral examination and diagnosis ranges between ₱500 to ₱800. For patients who proceed immediately with their proposed treatment (such as tooth restoration, cleaning, or orthodontic downpayment), this fee is credited toward your procedure.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Category 2: Treatments & Orthodontics -->
+      <div class="space-y-4 faq-category-block">
+        <div class="flex items-center gap-2 pb-2 border-b border-neutral-200">
+          <i data-lucide="sparkles" class="w-4 h-4 text-[#5F8239]"></i>
+          <h2 class="text-lg font-bold text-neutral-900 uppercase tracking-wide">2. Treatments, Braces &amp; Child Care</h2>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>How do I know if I need traditional braces, ceramic brackets, or aligners?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              During your diagnostic assessment, Dr. Micah Redilla conducts a photographic evaluation, tooth bite analysis, and 3D typodont study. Traditional metal braces provide optimal torque for severe crowding and bite correction, while ceramic brackets offer a subtle tooth-colored aesthetic. We'll present the advantages of each option so you can decide comfortably.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>Will getting braces or orthodontic adjustment hurt?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              Bracket placement is completely painless and non-invasive. You may feel mild tenderness or pressure for 24 to 48 hours following monthly wire adjustments as your teeth begin shifting into their ideal alignment. We provide complimentary orthodontic relief wax and guidance on soft foods.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>What makes your pediatric dentistry "fear-free"? What are the dinosaur shades?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              We specialize in positive reinforcement and child psychology. We hand each young patient a pair of playful green dinosaur sunglasses ("Dino Shades") to shield their eyes from the dental examination light. We explain instruments as playful space tools, use topical non-stinging numbing gels, and award bravery stickers so children look forward to future checkups!
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>What is the difference between direct composite veneers and laser teeth whitening?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              Teeth whitening lightens your natural tooth enamel by breaking down coffee, tea, or aging stains using laser light activation. Direct composite veneers, hand-sculpted by Dr. Pauline Trinidad (CODAC Smile Architect), cover the entire front face of teeth to permanently close gaps, alter tooth shapes, and mask severe intrinsic discoloration in a single appointment.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Category 3: Pricing, Payments & HMOs -->
+      <div class="space-y-4 faq-category-block">
+        <div class="flex items-center gap-2 pb-2 border-b border-neutral-200">
+          <i data-lucide="credit-card" class="w-4 h-4 text-[#5F8239]"></i>
+          <h2 class="text-lg font-bold text-neutral-900 uppercase tracking-wide">3. Pricing, Payments &amp; Installments</h2>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>Do you offer 0% interest monthly installment plans for braces?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              Yes! We offer budget-friendly orthodontic installment arrangements. You can begin with a minimal initial downpayment (covering diagnostic models, brackets, and initial bonding), followed by affordable monthly adjustment fees (₱1,000–₱1,500) until treatment completion.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>What payment methods are accepted at the clinic?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              We accept Cash, GCash, Maya, direct online bank transfers (BDO, BPI, UnionBank), and major Visa and MasterCard credit cards.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>Can I use my dental HMO or company insurance?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              We provide itemized Official Receipts (OR) and signed HMO claim forms for hassle-free reimbursement with your corporate or private dental insurance provider.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Category 4: Location & Sterilization Standards -->
+      <div class="space-y-4 faq-category-block">
+        <div class="flex items-center gap-2 pb-2 border-b border-neutral-200">
+          <i data-lucide="shield-check" class="w-4 h-4 text-[#5F8239]"></i>
+          <h2 class="text-lg font-bold text-neutral-900 uppercase tracking-wide">4. Location, Parking &amp; Safety</h2>
+        </div>
+
+        <!-- FAQ 11 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>Where is the clinic located in Sevilla and what are the main landmarks?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              We are located at <strong>2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union, 2500</strong>. Key landmarks along McArthur Highway:
+            </p>
+            <ul class="list-disc list-inside space-y-1 my-2 text-neutral-700 font-medium">
+              <li>Ground Floor tenant: <strong>Technoblitz Computer Store</strong></li>
+              <li>Directly across / near: <strong>ILAW ATBP. &amp; TESDA</strong></li>
+              <li>Just south of: <strong>DMMSU Mid La Union Campus</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ 12 -->
+        <div class="faq-item-card border border-neutral-200 rounded-2xl bg-[#FAF9F5] p-5 sm:p-6 transition hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base" aria-expanded="false">
+            <span>What sterilization and infection control protocols do you use?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-sm font-bold text-neutral-600 shrink-0 transition-transform">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-xs sm:text-sm text-neutral-600 leading-relaxed pt-0">
+            <p class="pt-3">
+              Every instrument undergoes ultrasonic cleaning, chemical bath immersion, and medical-grade <strong>Class B Vacuum Autoclave sterilization</strong>. Instruments are individually sealed in indicator barrier pouches and opened chairside exclusively in front of the patient.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. STILL HAVE QUESTIONS HELPLINE                                          -->
+  <!-- ========================================================================= -->
+  <section class="py-14 sm:py-20 bg-[#FAF9F5] border-t border-[#ECE7DE]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+      <div class="w-12 h-12 rounded-2xl bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center mx-auto">
+        <i data-lucide="message-square" class="w-6 h-6"></i>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900">
+        Didn't find what you were looking for?
+      </h2>
+      <p class="text-neutral-600 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+        Speak directly with our clinical receptionist or send a WhatsApp/Viber inquiry. We are happy to help!
+      </p>
+      <div class="pt-2 flex flex-wrap justify-center gap-4">
+        <a href="tel:09764857648" class="btn-pill-primary px-7 py-3 text-xs font-bold inline-flex items-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          <span>Call: (0976) 485 7648</span>
+        </a>
+        <a href="tel:0726108681" class="px-6 py-3 rounded-full border border-neutral-300 bg-white text-xs font-bold text-neutral-800 transition inline-flex items-center gap-2">
+          <span>Landline: 072 6108 681</span>
+        </a>
+        <a href="booking.html" class="px-6 py-3 rounded-full bg-[#37542B] text-white text-xs font-bold hover:bg-[#2F4724] transition">
+          Book an Appointment
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. GLOBAL RICH FOOTER                                                     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-white border-t border-neutral-100 pt-16 pb-12 text-neutral-600 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-neutral-100">
+        
+        <!-- Col 1: Brand Info (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-neutral-500 text-xs leading-relaxed max-w-sm">
+            DentaCure Dental Clinic is dedicated to compassionate, world-class dental healthcare for families across San Fernando City and La Union.
+          </p>
+          <div class="pt-2 space-y-1">
+            <p class="text-xs text-neutral-400">Direct Appointments &amp; Mobile:</p>
+            <p class="text-xs font-bold text-neutral-900">(0976) 485 7648 • Landline: 072 6108 681</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-neutral-900 transition">Home Page</a></li>
+            <li><a href="services.html" class="hover:text-neutral-900 transition">Clinical Services</a></li>
+            <li><a href="dentists.html" class="hover:text-neutral-900 transition">Our Dentists</a></li>
+            <li><a href="before-after.html" class="hover:text-neutral-900 transition">Before &amp; After</a></li>
+            <li><a href="reviews.html" class="hover:text-neutral-900 transition">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="services.html#orthodontics" class="hover:text-neutral-900 transition">Orthodontic Braces</a></li>
+            <li><a href="services.html#pediatric" class="hover:text-neutral-900 transition">Pediatric Dentistry</a></li>
+            <li><a href="services.html#cosmetic" class="hover:text-neutral-900 transition">Cosmetic Veneers</a></li>
+            <li><a href="services.html#restorative" class="hover:text-neutral-900 transition">Restorative Fillings</a></li>
+            <li><a href="booking.html" class="hover:text-neutral-900 transition">Book Online</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Clinic Location -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Clinic Location</h4>
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union, 2500
+          </p>
+          <p class="text-[11px] text-neutral-400">Landmarks: McArthur Highway, near ILAW ATBP., TESDA &amp; DMMSU.</p>
+          <a href="directions.html" class="inline-flex items-center gap-1 text-xs font-bold text-[#5F8239] hover:underline pt-1">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Google Map &amp; Directions</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Strip -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        <p>© 2026 DentaCure Dental Clinic. All Rights Reserved.</p>
+        <p>Mon–Sat: 9:00 AM – 5:30 PM | Sun: 1:00 PM – 5:00 PM (Cut-off: 5:00 PM)</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
+    // Real-time FAQ Search Filter
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('faq-search-input');
+      const faqCards = document.querySelectorAll('.faq-item-card');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase().trim();
+
+          faqCards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            if (text.includes(query)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

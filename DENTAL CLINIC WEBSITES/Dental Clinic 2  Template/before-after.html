@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dentacure">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before &amp; After Smile Transformations — DentaCure Dental Clinic La Union</title>
+  <meta name="description" content="Explore real patient before and after smile makeovers, anterior tooth composite bonding, braces, and veneers at DentaCure Dental Clinic, Grand Plaza Building, Sevilla, San Fernando City.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              green: '#37542B',
+              olive: '#4E7837',
+              sage: '#82A769',
+              blue: '#178782', // Replaced blue with Video Oceanic Teal
+              teal: '#178782',
+              aqua: '#229891',
+              mint: '#6DC4C4',
+              dark: '#1A1A1A',
+              cardDark: '#242424',
+              cream: '#FAF9F5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased selection:bg-neutral-200 min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================================================= -->
+  <!-- 1. STICKY TOP NAVIGATION BAR                                              -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div id="navbar-logo-icon" class="flex items-center justify-center transition-transform group-hover:scale-105">
+          <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+        </div>
+      </a>
+
+      <!-- Centered Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-600">
+        <a href="index.html" class="nav-link hover:text-neutral-900 transition">Home</a>
+        <a href="services.html" class="nav-link hover:text-neutral-900 transition">Our Services</a>
+        <a href="dentists.html" class="nav-link hover:text-neutral-900 transition">Our Dentists</a>
+        <a href="before-after.html" class="nav-link text-neutral-900 font-bold border-b-2 border-[#5F8239] pb-1">Before &amp; After</a>
+        <a href="reviews.html" class="nav-link hover:text-neutral-900 transition">Reviews</a>
+        <a href="faq.html" class="nav-link hover:text-neutral-900 transition">FAQ</a>
+        <a href="directions.html" class="nav-link hover:text-neutral-900 flex items-center gap-1 font-semibold text-[#5F8239]">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Directions</span>
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <button id="theme-toggle-btn" 
+          class="hidden sm:flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 transition shadow-sm"
+          title="Toggle Theme">
+          <span class="w-2 h-2 rounded-full theme-accent-bg animate-pulse"></span>
+          <span id="theme-current-label">🌿 DentaCure Green</span>
+        </button>
+
+        <a href="booking.html" class="btn-pill-primary px-6 py-2.5 text-sm font-semibold tracking-wide inline-flex items-center justify-center">
+          Book Online
+        </a>
+
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-neutral-100 bg-white px-6 py-4 space-y-3 shadow-xl">
+      <a href="index.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Home</a>
+      <a href="services.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Services</a>
+      <a href="dentists.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Dentists</a>
+      <a href="before-after.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">Before &amp; After Transformations</a>
+      <a href="reviews.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Patient Reviews</a>
+      <a href="faq.html" class="mobile-nav-link block text-base font-medium text-neutral-600">FAQ</a>
+      <a href="directions.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">📍 Google Map &amp; Directions</a>
+      <a href="booking.html" class="mobile-nav-link block text-base font-bold text-neutral-900 bg-[#EBF3E4] px-3 py-2 rounded-xl">📅 Book Appointment Online</a>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO HEADER                                                            -->
+  <!-- ========================================================================= -->
+  <section class="relative pt-12 pb-14 bg-gradient-to-b from-[#FAF9F5] to-white border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-neutral-400 mb-4 uppercase tracking-wider">
+        <a href="index.html" class="hover:text-neutral-700 transition">Home</a>
+        <span>/</span>
+        <span class="theme-accent">Clinical Transformations</span>
+      </nav>
+
+      <div class="max-w-3xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3E4] border border-[#D5E6CA] text-[#426123] text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Authentic Clinical Photography</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-[58px] font-extrabold tracking-tight text-neutral-900 leading-[1.12]">
+          Real Patient Smiles, <br>
+          <span class="theme-accent">Life-Changing Results</span>
+        </h1>
+        <p class="text-neutral-500 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+          Witness real clinical results achieved in our San Fernando operatory. Each smile is photographed under clinical cross-polarized lighting with full patient consent to illustrate the artistry of modern tooth preservation and restoration.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. FEATURED INTERACTIVE BEFORE & AFTER SLIDER                             -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="bg-[#FAF9F5] border border-[#ECE7DE] rounded-3xl p-6 sm:p-10 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left: Clinical Case Notes -->
+          <div class="lg:col-span-5 space-y-4">
+            <span class="theme-badge px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+              Featured Case 01
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+              Anterior Tooth Reconstruction &amp; Color Matching
+            </h2>
+            <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+              Patient presented with extensive chipped enamel and dark cervical staining on the upper central incisor. Dr. Pauline Trinidad performed microscopic enamel beveling followed by multi-layered nano-hybrid composite resin layering to match the natural light transmission and halo effect of adjacent teeth.
+            </p>
+
+            <div class="space-y-2 pt-2 text-xs text-neutral-700">
+              <div class="flex justify-between py-1.5 border-b border-neutral-200">
+                <span class="text-neutral-500 font-medium">Attending Clinician:</span>
+                <span class="font-bold text-neutral-900">Dr. Pauline Trinidad (CODAC)</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-200">
+                <span class="text-neutral-500 font-medium">Procedure Type:</span>
+                <span class="font-bold text-neutral-900">Direct Composite Bonding</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-neutral-200">
+                <span class="text-neutral-500 font-medium">Clinical Duration:</span>
+                <span class="font-bold text-neutral-900">Single 55-Minute Session</span>
+              </div>
+              <div class="flex justify-between py-1.5">
+                <span class="text-neutral-500 font-medium">Anesthesia Needed:</span>
+                <span class="font-bold text-[#5F8239]">Minimal / Pain-Free</span>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="booking.html" class="btn-pill-primary w-full sm:w-auto px-7 py-3 text-xs font-bold inline-flex items-center justify-center gap-2">
+                <span>Book Similar Treatment</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Split Slider -->
+          <div class="lg:col-span-7">
+            <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-neutral-900 ba-slider-container select-none cursor-ew-resize">
+              
+              <!-- Before Image (Base Layer) -->
+              <img 
+                src="assets/dentacure_before_after_smile.jpg" 
+                alt="Tooth Restoration Before" 
+                class="w-full h-80 sm:h-96 object-cover pointer-events-none filter contrast-90"
+              />
+              <span class="absolute top-4 left-4 bg-neutral-900/80 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm pointer-events-none">
+                Initial Condition
+              </span>
+
+              <!-- After Image (Overlay Clipped Layer) -->
+              <div class="absolute inset-0 ba-after-layer pointer-events-none overflow-hidden" style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);">
+                <img 
+                  src="assets/dentacure_before_after_smile.jpg" 
+                  alt="Tooth Restoration After" 
+                  class="w-full h-80 sm:h-96 object-cover filter brightness-110 saturate-110"
+                />
+                <span class="absolute top-4 right-4 bg-[#5F8239] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm pointer-events-none">
+                  Final Result
+                </span>
+              </div>
+
+              <!-- Draggable Divider Line & Handle -->
+              <div class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white ba-slider-handle pointer-events-none shadow-2xl">
+                <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white text-neutral-900 flex items-center justify-center shadow-2xl border border-neutral-200">
+                  <i data-lucide="chevrons-left-right" class="w-5 h-5 text-[#5F8239]"></i>
+                </div>
+              </div>
+
+            </div>
+
+            <p class="text-center text-xs text-neutral-400 mt-3 flex items-center justify-center gap-1.5">
+              <i data-lucide="hand" class="w-3.5 h-3.5"></i>
+              <span>Drag or swipe the slider left and right to inspect the composite margin</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. ADDITIONAL SMILE TRANSFORMATION CASES                                  -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-24 bg-[#FAF9F5] border-t border-[#ECE7DE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          Comprehensive Case Portfolio
+        </h2>
+        <p class="text-neutral-500 text-xs sm:text-sm">
+          Explore treatments ranging from orthodontic realignment to laser teeth whitening.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Case 2: Orthodontic Deep Bite Correction -->
+        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-neutral-100 bg-neutral-50 h-52">
+              <img src="assets/dental_braces_model_3d.jpg" alt="Orthodontic Braces Alignment" class="w-full h-full object-cover">
+            </div>
+            <span class="text-[10px] font-bold text-[#5F8239] uppercase tracking-wider">Case 02 • Orthodontics</span>
+            <h3 class="font-bold text-neutral-900 text-base">Class II Crowding &amp; Overbite Realignment</h3>
+            <p class="text-neutral-600 text-xs leading-relaxed">
+              Corrected with low-friction metal brackets by Dr. Micah Redilla. Restored chewing function, stabilized the dental arch, and established a symmetrical smile profile.
+            </p>
+            <div class="p-3 rounded-xl bg-[#FAF9F5] text-xs text-neutral-600 border border-neutral-100">
+              <span class="font-bold text-neutral-800 block">Total Treatment:</span> 16 Months • 0% Installment Plan
+            </div>
+          </div>
+          <a href="booking.html" class="btn-pill-primary w-full py-2.5 text-xs font-bold text-center block">
+            Ask for Braces Assessment
+          </a>
+        </div>
+
+        <!-- Case 3: In-Office Laser Teeth Whitening -->
+        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-neutral-100 bg-neutral-50 h-52">
+              <img src="assets/cta_smiling_woman.jpg" alt="Teeth Whitening Transformation" class="w-full h-full object-cover">
+            </div>
+            <span class="text-[10px] font-bold text-[#5F8239] uppercase tracking-wider">Case 03 • Cosmetic Whitening</span>
+            <h3 class="font-bold text-neutral-900 text-base">Enamel Re-Lustering &amp; Deep Bleaching</h3>
+            <p class="text-neutral-600 text-xs leading-relaxed">
+              Coffee and aging discoloration removed in a 45-minute chairside laser session. Zero post-treatment sensitivity reported thanks to our desensitizing isolation protocol.
+            </p>
+            <div class="p-3 rounded-xl bg-[#FAF9F5] text-xs text-neutral-600 border border-neutral-100">
+              <span class="font-bold text-neutral-800 block">Shade Improvement:</span> +7 Vita Shade Guide Levels
+            </div>
+          </div>
+          <a href="booking.html" class="btn-pill-primary w-full py-2.5 text-xs font-bold text-center block">
+            Book Laser Whitening
+          </a>
+        </div>
+
+        <!-- Case 4: Pediatric Comfort Checkup -->
+        <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden border border-neutral-100 bg-neutral-50 h-52">
+              <img src="assets/dentacure_patient_kids_glasses.jpg" alt="Child Patient Smile" class="w-full h-full object-cover">
+            </div>
+            <span class="text-[10px] font-bold text-[#5F8239] uppercase tracking-wider">Case 04 • Pediatric Care</span>
+            <h3 class="font-bold text-neutral-900 text-base">Early Childhood Cavity Interception</h3>
+            <p class="text-neutral-600 text-xs leading-relaxed">
+              Early tooth fissure sealant application and painless milk tooth restoration for a 4-year-old patient who happily wore our famous dinosaur shades throughout!
+            </p>
+            <div class="p-3 rounded-xl bg-[#FAF9F5] text-xs text-neutral-600 border border-neutral-100">
+              <span class="font-bold text-neutral-800 block">Experience:</span> 100% Tear-Free &amp; Fun
+            </div>
+          </div>
+          <a href="booking.html" class="btn-pill-primary w-full py-2.5 text-xs font-bold text-center block">
+            Book Pediatric Checkup
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. CONSULTATION CALLOUT                                                   -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <span class="theme-badge px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        Your Turn to Smile
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+        Ready for Your Own Smile Transformation?
+      </h2>
+      <p class="text-neutral-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+        Book a consultation today at DentaCure Dental Clinic, Grand Plaza Building, Sevilla, San Fernando City. We'll examine your teeth, discuss your goals, and formulate a clear, transparent plan.
+      </p>
+      <div class="pt-2 flex flex-wrap justify-center gap-4">
+        <a href="booking.html" class="btn-pill-primary px-8 py-3.5 text-sm font-bold inline-flex items-center gap-2">
+          <span>Book Free Smile Assessment</span>
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+        </a>
+        <a href="directions.html" class="px-7 py-3.5 rounded-full border border-neutral-200 hover:bg-neutral-50 text-sm font-semibold text-neutral-800 transition inline-flex items-center gap-2 shadow-sm">
+          <i data-lucide="map-pin" class="w-4 h-4 text-[#5F8239]"></i>
+          <span>View Clinic Location</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. GLOBAL RICH FOOTER                                                     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-white border-t border-neutral-100 pt-16 pb-12 text-neutral-600 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-neutral-100">
+        
+        <!-- Col 1: Brand Info (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-neutral-500 text-xs leading-relaxed max-w-sm">
+            DentaCure Dental Clinic is the trusted dental care provider in San Fernando City, La Union, offering modern braces, cosmetic bonding, smile transformations, and gentle extractions.
+          </p>
+          <div class="pt-2 space-y-1">
+            <p class="text-xs text-neutral-400">Direct Appointments &amp; Mobile:</p>
+            <p class="text-xs font-bold text-neutral-900">(0976) 485 7648 • Landline: 072 6108 681</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-neutral-900 transition">Home Page</a></li>
+            <li><a href="services.html" class="hover:text-neutral-900 transition">Clinical Services</a></li>
+            <li><a href="dentists.html" class="hover:text-neutral-900 transition">Our Dentists</a></li>
+            <li><a href="before-after.html" class="font-semibold text-[#5F8239]">Before &amp; After</a></li>
+            <li><a href="reviews.html" class="hover:text-neutral-900 transition">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Transformations -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Transformations</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="before-after.html" class="hover:text-neutral-900 transition">Composite Bonding</a></li>
+            <li><a href="services.html#orthodontics" class="hover:text-neutral-900 transition">Orthodontic Braces</a></li>
+            <li><a href="services.html#cosmetic" class="hover:text-neutral-900 transition">Cosmetic Veneers</a></li>
+            <li><a href="services.html#pediatric" class="hover:text-neutral-900 transition">Pediatric Care</a></li>
+            <li><a href="booking.html" class="hover:text-neutral-900 transition">Book Consultation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Clinic Location -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Clinic Location</h4>
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union, 2500
+          </p>
+          <p class="text-[11px] text-neutral-400">Landmarks: McArthur Highway, near ILAW ATBP., TESDA &amp; DMMSU.</p>
+          <a href="directions.html" class="inline-flex items-center gap-1 text-xs font-bold text-[#5F8239] hover:underline pt-1">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Google Map &amp; Directions</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Strip -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        <p>© 2026 DentaCure Dental Clinic. All Rights Reserved.</p>
+        <p>Mon–Sat: 9:00 AM – 5:30 PM | Sun: 1:00 PM – 5:00 PM (Cut-off: 5:00 PM)</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

@@ -40,5 +40,5 @@ hyperframes/**/output/*.mp4
 .netlify/
 *.tsbuildinfo
 
-
-
+# Scratch & temporary scripts
+scratch/

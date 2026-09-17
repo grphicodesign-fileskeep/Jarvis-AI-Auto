@@ -1,0 +1,1587 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dentacure">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DentaCure & Dentiva — Advanced Dental Healthcare Clinic</title>
+  <meta name="description" content="Get a beautiful straight smile quickly. Premier orthodontic, cosmetic, and general dental clinic.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              green: '#37542B',
+              olive: '#4E7837',
+              sage: '#82A769',
+              blue: '#178782', // Replaced blue with Video Oceanic Teal
+              teal: '#178782',
+              aqua: '#229891',
+              mint: '#6DC4C4',
+              dark: '#1A1A1A',
+              cardDark: '#242424',
+              cream: '#FAF9F5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased selection:bg-neutral-200">
+
+  <!-- ========================================================================= -->
+  <!-- 1. STICKY TOP NAVIGATION BAR                                              -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div id="navbar-logo-icon" class="flex items-center justify-center transition-transform group-hover:scale-105">
+          <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+        </div>
+      </a>
+
+      <!-- Centered Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-600">
+        <a href="index.html" class="nav-link text-neutral-900 font-semibold hover:text-neutral-900">Home</a>
+        <a href="services.html" class="nav-link hover:text-neutral-900">Our Services</a>
+        <a href="dentists.html" class="nav-link hover:text-neutral-900">Our Dentists</a>
+        <a href="before-after.html" class="nav-link hover:text-neutral-900">Before &amp; After</a>
+        <a href="reviews.html" class="nav-link hover:text-neutral-900">Reviews</a>
+        <a href="faq.html" class="nav-link hover:text-neutral-900">FAQ</a>
+        <a href="directions.html" class="nav-link hover:text-neutral-900 flex items-center gap-1 font-semibold text-[#5F8239]">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Directions</span>
+        </a>
+      </nav>
+
+      <!-- Right Actions: Theme Toggle & Book Online Pill -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        
+        <!-- Palette Switcher Pill Button -->
+        <button id="theme-toggle-btn" 
+          class="hidden sm:flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 transition shadow-sm"
+          title="Toggle between DentaCure (Green) and Tooth D' Care (Teal)">
+          <span class="w-2 h-2 rounded-full theme-accent-bg animate-pulse"></span>
+          <span id="theme-current-label">🌿 DentaCure Green</span>
+        </button>
+
+        <!-- Book Online Solid Pill CTA -->
+        <a href="booking.html" class="btn-pill-primary px-6 py-2.5 text-sm font-semibold tracking-wide inline-flex items-center justify-center">
+          Book Online
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-neutral-100 bg-white px-6 py-4 space-y-3 shadow-xl">
+      <a href="index.html" class="mobile-nav-link block text-base font-semibold text-neutral-900">Home</a>
+      <a href="services.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Services</a>
+      <a href="dentists.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Dentists</a>
+      <a href="before-after.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Before &amp; After Transformations</a>
+      <a href="reviews.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Patient Reviews</a>
+      <a href="faq.html" class="mobile-nav-link block text-base font-medium text-neutral-600">FAQ</a>
+      <a href="directions.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">📍 Google Map &amp; Directions</a>
+      <a href="booking.html" class="mobile-nav-link block text-base font-bold text-neutral-900 bg-[#EBF3E4] px-3 py-2 rounded-xl">📅 Book Appointment Online</a>
+      
+      <div class="pt-3 border-t border-neutral-100 flex items-center justify-between">
+        <span class="text-xs text-neutral-500 font-medium">Palette Mode:</span>
+        <button onclick="document.getElementById('theme-toggle-btn').click()" class="text-xs font-semibold px-3 py-1 rounded-full border border-neutral-200">
+          Switch Theme
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION (Split 2-Column with 3D Orthodontic Typodont Asset)       -->
+  <!-- ========================================================================= -->
+  <section id="home" class="relative pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Typography & CTAs (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 sm:space-y-8">
+          
+          <!-- Top Clinic Hours & Schedule Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-semibold theme-badge tracking-wide">
+            <span class="w-2 h-2 rounded-full theme-accent-bg"></span>
+            <span id="hero-date-badge">🌿 Grand Plaza Bldg, Sevilla, San Fernando • Mon-Sat 9AM-5:30PM | Sun 1-5PM</span>
+          </div>
+
+          <!-- Main Headline with Accent Highlight -->
+          <h1 class="text-4xl sm:text-5xl lg:text-[62px] font-extrabold tracking-tight text-neutral-900 leading-[1.12]">
+            Get a <span class="theme-accent">Beautiful Straight Smile Quickly.</span>
+          </h1>
+
+          <!-- Subtext Paragraph -->
+          <p class="text-neutral-500 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+            Transform your smile quickly and effortlessly with our exceptional services. We understand the importance of having a beautiful, straight smile, and that's why we offer efficient solutions tailored to your needs.
+          </p>
+
+          <!-- Action Row: Book Now Pill CTA -->
+          <div class="pt-2">
+            <button data-action="open-booking" class="btn-pill-primary px-8 py-3.5 text-base font-semibold shadow-md">
+              Book Now
+            </button>
+          </div>
+
+          <!-- Trust Proof / Avatar Indicator (Real DentaCure Patients) -->
+          <div class="flex items-center gap-4 pt-4 border-t border-neutral-100 max-w-lg">
+            <div class="flex -space-x-2.5 overflow-hidden">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="assets/dentacure_patient_kids_glasses.jpg" alt="Pediatric Patient">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="assets/dentacure_patient_family_reception.jpg" alt="Family Patient">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="assets/dentacure_patient_mother_daughter.jpg" alt="Mother & Daughter">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="assets/cta_smiling_woman.jpg" alt="Happy Patient">
+            </div>
+            <div class="text-xs sm:text-sm text-neutral-600 leading-snug">
+              <strong class="font-bold text-neutral-900 text-base">827+</strong> 
+              <span class="block text-neutral-500">Real smiles transformed with gentle, gentle dental care.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: 3D Anatomical Braces Model (5 cols) -->
+        <div class="lg:col-span-5 relative flex justify-center items-center">
+          
+          <!-- Ambient Radial Glow -->
+          <div class="ambient-glow absolute w-[360px] h-[360px] sm:w-[460px] sm:h-[460px] rounded-full pointer-events-none -z-10"></div>
+          
+          <!-- Doctor Open Tag / Clinic Badge floating top right -->
+          <div class="absolute top-2 right-4 sm:right-8 bg-white/95 backdrop-blur-md shadow-lg border border-neutral-100 px-4 py-2 rounded-2xl text-[11px] font-semibold text-neutral-700 z-10 flex items-center gap-2">
+            <i data-lucide="clock" class="w-3.5 h-3.5 theme-accent"></i>
+            <div>
+              <span class="block font-bold text-neutral-900">Mon – Sat: 9AM – 5:30PM</span>
+              <span class="text-neutral-400 text-[10px]">Sun: 1PM – 5PM (Cut-off 5PM)</span>
+            </div>
+          </div>
+
+          <!-- 3D Typodont Braces Model Image with subtle floating animation -->
+          <div class="relative w-full max-w-[420px] aspect-square flex items-center justify-center">
+            <img 
+              src="assets/dental_braces_model_3d.png" 
+              alt="3D Dental Braces Anatomical Model" 
+              class="w-full h-auto object-contain animate-float-teeth select-none drop-shadow-2xl"
+            />
+          </div>
+
+          <!-- Bottom Floating Technology Badge -->
+          <div class="absolute -bottom-2 left-4 sm:left-8 bg-white/95 backdrop-blur-md shadow-lg border border-neutral-100 px-4 py-2.5 rounded-2xl text-xs font-semibold text-neutral-800 z-10 flex items-center gap-3">
+            <div class="w-7 h-7 rounded-full theme-accent-soft-bg flex items-center justify-center">
+              <i data-lucide="sparkles" class="w-4 h-4 theme-accent"></i>
+            </div>
+            <div>
+              <span class="font-bold text-neutral-900 block">Clear Orthodontics</span>
+              <span class="text-[10px] text-neutral-400">Micro-precision archwires</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. STATS RIBBON (4-Column Layout with Animated Counters)                  -->
+  <!-- ========================================================================= -->
+  <section class="border-y border-neutral-100 bg-neutral-50/50 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-neutral-200">
+        
+        <!-- Stat 1 -->
+        <div class="flex items-center gap-4 px-4 pt-4 md:pt-0">
+          <span class="stat-number text-5xl sm:text-6xl font-black theme-accent tracking-tighter" data-target="170">0</span>
+          <span class="text-xs uppercase tracking-wider text-neutral-500 font-semibold leading-snug">
+            Performed<br><span class="text-neutral-800">surgeries</span>
+          </span>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="flex items-center gap-4 px-4 pt-4 md:pt-0">
+          <span class="stat-number text-5xl sm:text-6xl font-black theme-accent tracking-tighter" data-target="85">0</span>
+          <span class="text-xs uppercase tracking-wider text-neutral-500 font-semibold leading-snug">
+            Satisfied<br><span class="text-neutral-800">Patients</span>
+          </span>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="flex items-center gap-4 px-4 pt-4 md:pt-0">
+          <span class="stat-number text-5xl sm:text-6xl font-black theme-accent tracking-tighter" data-target="176">0</span>
+          <span class="text-xs uppercase tracking-wider text-neutral-500 font-semibold leading-snug">
+            Staff<br><span class="text-neutral-800">Members</span>
+          </span>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="flex items-center gap-4 px-4 pt-4 md:pt-0">
+          <span class="stat-number text-5xl sm:text-6xl font-black theme-accent tracking-tighter" data-target="98">0</span>
+          <span class="text-xs uppercase tracking-wider text-neutral-500 font-semibold leading-snug">
+            Yearly<br><span class="text-neutral-800">Surgeries</span>
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. DARK SERVICES CONTAINER (32px Rounded Container with 3-Col Cards)      -->
+  <!-- ========================================================================= -->
+  <section id="services" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Massive Dark Container with 32px rounded corners -->
+      <div class="bg-[#1A1A1A] text-white rounded-[32px] p-8 sm:p-12 lg:p-16 shadow-2xl">
+        
+        <!-- Split Header -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12 sm:mb-16">
+          <div class="lg:col-span-7">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+              We specialize in you.<br>whatever your specialty
+            </h2>
+          </div>
+          <div class="lg:col-span-5">
+            <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
+              At our company, we take pride in providing individuals customized solutions that are specifically tailored to meet your unique expertise, requirements, and preferences.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3-Column Service Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Service Card 1: Vibrant Checkups -->
+          <div class="bg-[#242424] rounded-2xl overflow-hidden group card-hover-scale flex flex-col border border-neutral-800">
+            <div class="h-60 sm:h-64 overflow-hidden relative">
+              <img 
+                src="assets/service_checkups.jpg" 
+                alt="Vibrant Checkups" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-white/90">
+                Preventive Care
+              </div>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-neutral-200 transition">
+                  Vibrant Checkups
+                </h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                  At our dental practice, we believe that regular dental exams are the cornerstone of a healthy and radiant smile.
+                </p>
+              </div>
+              <button data-action="open-booking" class="inline-flex items-center gap-2 text-sm font-semibold theme-accent hover:underline pt-2">
+                Learn More <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service Card 2: Revitalized Cleaning -->
+          <div class="bg-[#242424] rounded-2xl overflow-hidden group card-hover-scale flex flex-col border border-neutral-800">
+            <div class="h-60 sm:h-64 overflow-hidden relative">
+              <img 
+                src="assets/service_cleaning.jpg" 
+                alt="Revitalized Cleaning" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-white/90">
+                Oral Hygiene
+              </div>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-neutral-200 transition">
+                  Revitalized Cleaning
+                </h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                  At our clinic, we understand that maintaining optimal oral health is essential for overall smile and overall well-being.
+                </p>
+              </div>
+              <button data-action="open-booking" class="inline-flex items-center gap-2 text-sm font-semibold theme-accent hover:underline pt-2">
+                Learn More <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service Card 3: Reinforced Fillings -->
+          <div class="bg-[#242424] rounded-2xl overflow-hidden group card-hover-scale flex flex-col border border-neutral-800">
+            <div class="h-60 sm:h-64 overflow-hidden relative">
+              <img 
+                src="assets/service_fillings.jpg" 
+                alt="Reinforced Fillings" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-white/90">
+                Restorative
+              </div>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-neutral-200 transition">
+                  Reinforced Fillings
+                </h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                  At our dental practice, we prioritize the longevity and functionality of your smile. Our advanced fillings of true value.
+                </p>
+              </div>
+              <button data-action="open-booking" class="inline-flex items-center gap-2 text-sm font-semibold theme-accent hover:underline pt-2">
+                Learn More <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. PROMO SECTION: BUDGET-FRIENDLY DISCOUNT PLAN                           -->
+  <!-- ========================================================================= -->
+  <section id="discount-plan" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: Copy, Avatars & "Join Now Save Up" with Hand-drawn Arrow -->
+        <div class="lg:col-span-6 space-y-6">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight leading-tight">
+            Your Family's Dental Health Matters: Discover Our Budget-Friendly Discount Plan.
+          </h2>
+          
+          <p class="text-neutral-500 text-base sm:text-lg leading-relaxed">
+            Unlock Optimal Dental Wellness For Your Loved Ones: Embrace Our Budget-Friendly Discount Plan for Comprehensive Care and Radiant Smiles.
+          </p>
+
+          <!-- Avatar Cluster + Arrow + Join Now Button -->
+          <div class="pt-4 flex flex-wrap items-center gap-6">
+            
+            <div class="flex items-center gap-3">
+              <div class="flex -space-x-2 overflow-hidden">
+                <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="assets/dentacure_patient_kids_glasses.jpg" alt="Pediatric Patient">
+                <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="assets/dentacure_patient_family_reception.jpg" alt="Family Dental Patient">
+                <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="assets/dentacure_patient_mother_daughter.jpg" alt="Mother and Child">
+                <div class="w-10 h-10 rounded-full theme-accent-soft-bg flex items-center justify-center text-xs font-bold theme-accent ring-2 ring-white">
+                  +1.2k
+                </div>
+              </div>
+              <span class="text-xs text-neutral-500 font-medium">1,200+ Active<br>Family Members</span>
+            </div>
+
+            <!-- Hand-drawn Doodle Arrow SVG -->
+            <div class="hidden sm:block text-neutral-400">
+              <svg width="46" height="28" viewBox="0 0 54 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6c16 2 34 8 42 18"/>
+                <path d="M40 24l6 2-2-6"/>
+              </svg>
+            </div>
+
+            <!-- Join Now Button -->
+            <button data-action="open-discount" class="btn-pill-primary px-7 py-3 text-sm font-semibold">
+              Join Now Save Up
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Two Stacked Pastel Cards (80% & 40%) with Smiley Face Outlines -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Stacked Card 1: 80% Savings -->
+          <div class="theme-accent-soft-bg border rounded-3xl p-8 sm:p-10 relative overflow-hidden card-hover-scale shadow-sm">
+            <!-- Minimal Smiley Face SVG Outline -->
+            <div class="absolute top-6 right-8 text-neutral-300 opacity-60">
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+              </svg>
+            </div>
+
+            <div class="relative z-10 space-y-3">
+              <span class="text-5xl sm:text-6xl font-black theme-accent tracking-tight">80%</span>
+              <h3 class="text-lg font-bold text-neutral-900 pt-1">Exclusive Member Savings</h3>
+              <p class="text-neutral-600 text-sm sm:text-base leading-relaxed max-w-md">
+                Save 30% - 80% on Dental Procedures, Including Oral Exams, Cleanings, and X-Rays.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stacked Card 2: 40% Savings -->
+          <div class="theme-accent-soft-bg border rounded-3xl p-8 sm:p-10 relative overflow-hidden card-hover-scale shadow-sm">
+            <!-- Minimal Smiley Face SVG Outline -->
+            <div class="absolute top-6 right-8 text-neutral-300 opacity-60">
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+              </svg>
+            </div>
+
+            <div class="relative z-10 space-y-3">
+              <span class="text-5xl sm:text-6xl font-black theme-accent tracking-tight">40%</span>
+              <h3 class="text-lg font-bold text-neutral-900 pt-1">Enhanced Member Benefits</h3>
+              <p class="text-neutral-600 text-sm sm:text-base leading-relaxed max-w-md">
+                Save 40% on All Other Dental Services, Including Cosmetic, Restorative, and Specialty Dental Procedures.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. TEAM SECTION: INTRODUCING OUR DEDICATED DENTISTS                       -->
+  <!-- ========================================================================= -->
+  <section id="dentists" class="py-16 sm:py-24 bg-neutral-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Header with Carousel Controls & View All Link -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3E4] border border-[#D5E6CA] text-[#426123] text-xs font-bold uppercase tracking-wider mb-2">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            <span>Licensed Philippine Dental Specialists</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 tracking-tight">
+            Meet Our Dedicated Dentists
+          </h2>
+          <p class="text-neutral-500 text-sm sm:text-base mt-2 max-w-xl">
+            Board-certified clinicians committed to gentle, minimally invasive dental care and radiant smile design in San Fernando City, La Union.
+          </p>
+        </div>
+
+        <!-- Carousel Arrow Buttons & View All Page Link -->
+        <div class="flex items-center gap-3">
+          <a href="dentists.html" class="text-xs font-bold text-[#5F8239] hover:underline flex items-center gap-1 mr-2">
+            <span>View Full Profiles</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+          <button id="doc-prev-btn" class="w-10 h-10 rounded-full border border-neutral-200 bg-white hover:bg-neutral-100 flex items-center justify-center text-neutral-600 transition shadow-sm">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+          <button id="doc-next-btn" class="w-10 h-10 rounded-full border border-neutral-200 bg-white hover:bg-neutral-100 flex items-center justify-center text-neutral-600 transition shadow-sm">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4-Column Doctor Grid -->
+      <div id="doctors-track" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto pb-4">
+        
+        <!-- Doctor Card 1: Dr. Micah Redilla -->
+        <div class="doctor-card bg-white rounded-3xl p-5 border border-neutral-200/80 shadow-sm cursor-pointer card-hover-scale group" data-doctor-id="micah">
+          <div class="aspect-square rounded-2xl overflow-hidden bg-neutral-100 mb-5 relative shadow-inner">
+            <img 
+              src="assets/dentist_micah_redilla.png" 
+              alt="Dr. Micah Redilla" 
+              class="doctor-portrait w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-3 left-3">
+              <span class="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-[#37542B] shadow-sm">
+                General &amp; Surgery
+              </span>
+            </div>
+          </div>
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-neutral-900 group-hover:text-[#5F8239] transition">Dr. Micah Redilla</h3>
+              <p class="text-xs text-neutral-500 font-medium">Lead Dental Surgeon</p>
+            </div>
+            <div class="flex items-center gap-1.5 text-neutral-400">
+              <span class="text-xs font-semibold text-[#5F8239] group-hover:underline">Bio</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-[#5F8239]"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Card 2: Dr. Pauline Trinidad -->
+        <div class="doctor-card bg-white rounded-3xl p-5 border border-neutral-200/80 shadow-sm cursor-pointer card-hover-scale group" data-doctor-id="pauline">
+          <div class="aspect-square rounded-2xl overflow-hidden bg-neutral-100 mb-5 relative shadow-inner">
+            <img 
+              src="assets/dentist_pauline_trinidad.png" 
+              alt="Dr. Pauline Trinidad" 
+              class="doctor-portrait w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-3 left-3">
+              <span class="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-[#37542B] shadow-sm">
+                Cosmetic &amp; CODAC
+              </span>
+            </div>
+          </div>
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-neutral-900 group-hover:text-[#5F8239] transition">Dr. Pauline Trinidad</h3>
+              <p class="text-xs text-neutral-500 font-medium">Cosmetic Dentist &amp; Smile Architect</p>
+            </div>
+            <div class="flex items-center gap-1.5 text-neutral-400">
+              <span class="text-xs font-semibold text-[#5F8239] group-hover:underline">Bio</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-[#5F8239]"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Card 3: DentaCure Clinical Team -->
+        <div class="doctor-card bg-white rounded-3xl p-5 border border-neutral-200/80 shadow-sm cursor-pointer card-hover-scale group" data-doctor-id="clinic_team">
+          <div class="aspect-square rounded-2xl overflow-hidden bg-neutral-100 mb-5 relative shadow-inner">
+            <img 
+              src="assets/dentacure_clinic_interior.jpg" 
+              alt="DentaCure Clinical Team and Facility" 
+              class="doctor-portrait w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-3 left-3">
+              <span class="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-[#37542B] shadow-sm">
+                Dual Operatory Suite
+              </span>
+            </div>
+          </div>
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-neutral-900 group-hover:text-[#5F8239] transition">Clinical Care Team</h3>
+              <p class="text-xs text-neutral-500 font-medium">Certified Dental Nurses</p>
+            </div>
+            <div class="flex items-center gap-1.5 text-neutral-400">
+              <span class="text-xs font-semibold text-[#5F8239] group-hover:underline">Info</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-[#5F8239]"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Card 4: Pediatric Care Specialists -->
+        <div class="doctor-card bg-white rounded-3xl p-5 border border-neutral-200/80 shadow-sm cursor-pointer card-hover-scale group" data-doctor-id="pediatric">
+          <div class="aspect-square rounded-2xl overflow-hidden bg-neutral-100 mb-5 relative shadow-inner">
+            <img 
+              src="assets/dentacure_patient_kids_glasses.jpg" 
+              alt="Pediatric Dental Care Unit" 
+              class="doctor-portrait w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-3 left-3">
+              <span class="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-[#37542B] shadow-sm">
+                Dino Fun Glasses
+              </span>
+            </div>
+          </div>
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-neutral-900 group-hover:text-[#5F8239] transition">Pediatric Unit</h3>
+              <p class="text-xs text-neutral-500 font-medium">Fear-Free Child Dentistry</p>
+            </div>
+            <div class="flex items-center gap-1.5 text-neutral-400">
+              <span class="text-xs font-semibold text-[#5F8239] group-hover:underline">Info</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-[#5F8239]"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6.5 BEFORE & AFTER TRANSFORMATION SPOTLIGHT                               -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20 bg-white border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-br from-[#FAF9F5] to-white rounded-3xl sm:rounded-[36px] border border-[#ECE7DE] p-8 sm:p-12 shadow-sm overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Left: Copy and Highlights -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3E4] border border-[#D5E6CA] text-[#426123] text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Proven Clinical Results</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight leading-tight">
+              Real Transformations, <br><span class="text-[#5F8239]">Life-Changing Smiles</span>
+            </h2>
+
+            <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+              Witness the precision of our restorative and cosmetic dentistry. From repairing missing anterior teeth to full orthodontic smile alignments, DentaCure delivers natural, lasting aesthetic excellence.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center gap-3 text-xs sm:text-sm text-neutral-700">
+                <div class="w-6 h-6 rounded-full bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold">✓</div>
+                <span>Seamless anterior incisor gap closure &amp; aesthetic tooth shade matching</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs sm:text-sm text-neutral-700">
+                <div class="w-6 h-6 rounded-full bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold">✓</div>
+                <span>Minimally invasive, biologically conservative restorative techniques</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs sm:text-sm text-neutral-700">
+                <div class="w-6 h-6 rounded-full bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold">✓</div>
+                <span>Custom smile architecture guided by facial proportions</span>
+              </div>
+            </div>
+
+            <div class="pt-4 flex flex-wrap items-center gap-4">
+              <a href="before-after.html" class="btn-pill-primary px-7 py-3 text-sm font-bold shadow-md inline-flex items-center gap-2">
+                <span>View Full Gallery &amp; Case Studies</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="booking.html" class="px-6 py-3 rounded-full border border-neutral-300 text-neutral-800 font-semibold text-sm hover:bg-neutral-50 transition">
+                Consult With A Doctor
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Real Case Study Feature Image -->
+          <div class="lg:col-span-6 flex justify-center">
+            <div class="w-full max-w-md bg-white rounded-3xl p-4 sm:p-5 border border-neutral-200 shadow-xl shadow-neutral-100 space-y-3">
+              <div class="relative rounded-2xl overflow-hidden border border-neutral-100 aspect-square">
+                <img 
+                  src="assets/dentacure_before_after_smile.jpg" 
+                  alt="DentaCure Real Before and After Anterior Tooth Restoration" 
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute top-3 left-3 bg-neutral-900/85 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full shadow">
+                  BEFORE &amp; AFTER
+                </div>
+                <div class="absolute bottom-3 right-3 bg-[#5F8239]/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow flex items-center gap-1">
+                  <i data-lucide="check" class="w-3 h-3"></i>
+                  <span>DentaCure Verified</span>
+                </div>
+              </div>
+
+              <div class="p-2 space-y-1">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-bold text-neutral-900">Anterior Incisor Restoration</span>
+                  <span class="text-[#5F8239] font-bold">Restorative Treatment</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 leading-snug">
+                  Replacement of missing upper anterior tooth with lifelike porcelain bridge, restoring bite functionality and natural confidence.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 7. TESTIMONIALS SECTION (Warm Beige Cards with Quote Graphics)             -->
+  <!-- ========================================================================= -->
+  <section id="testimonials" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Header -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+        <div class="lg:col-span-7">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight">
+            See What Our Clients Have to Say:
+          </h2>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="text-neutral-400 text-sm sm:text-base leading-relaxed">
+            Embark on a Journey through Heartfelt Experiences: Unveil the Praises and Testimonials from Our Esteemed Clients, Showcasing the Unmatched Quality of Our Services!
+          </p>
+        </div>
+      </div>
+
+      <!-- Testimonials Grid (Warm Beige Cards with Real DentaCure Patients) -->
+      <div id="testimonials-track" class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        
+        <!-- Review 1: Pediatric Dentistry -->
+        <div class="bg-[#FAF7F2] rounded-3xl p-7 sm:p-8 border border-[#ECE7DE] relative flex flex-col justify-between card-hover-scale shadow-sm">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="text-[#5F8239] font-serif text-4xl leading-none">“</div>
+              <span class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EBF3E4] text-[#426123]">
+                Pediatric Care
+              </span>
+            </div>
+            <p class="text-neutral-700 text-sm sm:text-base leading-relaxed">
+              Bringing our kids to the dentist used to be so stressful, but DentaCure made it a joyful adventure! The dinosaur sunglasses were such a thoughtful touch, and the dentist was incredibly gentle. Zero tears, all smiles!
+            </p>
+          </div>
+
+          <div class="pt-6 border-t border-[#E8E1D5] flex items-center justify-between mt-6">
+            <div class="flex items-center gap-3">
+              <img src="assets/dentacure_patient_kids_glasses.jpg" alt="Ethan and Chloe" class="w-12 h-12 rounded-full object-cover ring-2 ring-[#5F8239]/30">
+              <div>
+                <h4 class="text-sm font-bold text-neutral-900">Ethan &amp; Chloe's Parents</h4>
+                <p class="text-xs text-neutral-400">San Fernando City</p>
+              </div>
+            </div>
+            <span class="text-xs font-semibold theme-accent flex items-center gap-1">
+              Verified <i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#5F8239]"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Review 2: Family Dentistry -->
+        <div class="bg-[#FAF7F2] rounded-3xl p-7 sm:p-8 border border-[#ECE7DE] relative flex flex-col justify-between card-hover-scale shadow-sm">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="text-[#5F8239] font-serif text-4xl leading-none">“</div>
+              <span class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EBF3E4] text-[#426123]">
+                Family Dentistry
+              </span>
+            </div>
+            <p class="text-neutral-700 text-sm sm:text-base leading-relaxed">
+              DentaCure at Grand Plaza Sevilla is hands-down the best dental clinic in La Union. The entire staff is courteous, welcoming, and attentive. The new modern clinic is spotless and their gentle approach keeps our whole family smiling.
+            </p>
+          </div>
+
+          <div class="pt-6 border-t border-[#E8E1D5] flex items-center justify-between mt-6">
+            <div class="flex items-center gap-3">
+              <img src="assets/dentacure_patient_family_reception.jpg" alt="The Soriano Family" class="w-12 h-12 rounded-full object-cover ring-2 ring-[#5F8239]/30">
+              <div>
+                <h4 class="text-sm font-bold text-neutral-900">The Soriano Family</h4>
+                <p class="text-xs text-neutral-400">Orthodontics &amp; Care</p>
+              </div>
+            </div>
+            <span class="text-xs font-semibold theme-accent flex items-center gap-1">
+              Verified <i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#5F8239]"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Review 3: Toddler & Preventive Checkup -->
+        <div class="bg-[#FAF7F2] rounded-3xl p-7 sm:p-8 border border-[#ECE7DE] relative flex flex-col justify-between card-hover-scale shadow-sm">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="text-[#5F8239] font-serif text-4xl leading-none">“</div>
+              <span class="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EBF3E4] text-[#426123]">
+                Gentle Checkup
+              </span>
+            </div>
+            <p class="text-neutral-700 text-sm sm:text-base leading-relaxed">
+              Very gentle and reassuring with toddler care! The clinicians wear complete PPE and sterilization standards are top-notch. Finding parking at Grand Plaza Sevilla was also super easy. Highly recommended to all moms!
+            </p>
+          </div>
+
+          <div class="pt-6 border-t border-[#E8E1D5] flex items-center justify-between mt-6">
+            <div class="flex items-center gap-3">
+              <img src="assets/dentacure_patient_mother_daughter.jpg" alt="Carla and Sofia" class="w-12 h-12 rounded-full object-cover ring-2 ring-[#5F8239]/30">
+              <div>
+                <h4 class="text-sm font-bold text-neutral-900">Carla &amp; Sofia</h4>
+                <p class="text-xs text-neutral-400">Gentle Cleaning</p>
+              </div>
+            </div>
+            <span class="text-xs font-semibold theme-accent flex items-center gap-1">
+              Verified <i data-lucide="check-circle" class="w-3.5 h-3.5 text-[#5F8239]"></i>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Pagination Controls -->
+      <div class="flex items-center justify-center gap-3 mt-10">
+        <button id="test-prev-btn" class="w-10 h-10 rounded-full border border-neutral-200 bg-white hover:bg-neutral-100 flex items-center justify-center text-neutral-600 transition shadow-sm">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        </button>
+        <button id="test-next-btn" class="w-10 h-10 rounded-full theme-accent-bg text-white hover:brightness-105 flex items-center justify-center transition shadow-sm">
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 7.2 REAL MOMENTS & CLINIC SHOWCASE                                        -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20 bg-neutral-50/50 border-t border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="space-y-3 max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3E4] border border-[#D5E6CA] text-[#426123] text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+            <span>Life at DentaCure • Sevilla, San Fernando City</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+            Real Care, Genuine Smiles &amp; Warm Atmosphere
+          </h2>
+          <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+            Step inside our Grand Plaza Building clinic. Experience an anxiety-free, compassionate dental home where kids and adults feel celebrated.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="directions.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-neutral-200 bg-white hover:bg-neutral-50 text-neutral-800 text-xs font-bold transition shadow-sm">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#5F8239]"></i>
+            <span>Visit Grand Plaza Clinic</span>
+          </a>
+          <button data-action="open-booking" class="btn-pill-primary px-6 py-2.5 text-xs font-bold">
+            Book a Visit
+          </button>
+        </div>
+      </div>
+
+      <!-- 4-Card Visual Showcase Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Official Clinic Hours Poster Feature -->
+        <div class="group bg-white rounded-3xl p-5 border border-neutral-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="aspect-[9/14] rounded-2xl overflow-hidden bg-neutral-100 mb-4 relative shadow-inner">
+              <img 
+                src="assets/dentacure_clinic_hours.png" 
+                alt="DentaCure Official Clinic Hours Poster" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-3 left-3 right-3 text-white">
+                <span class="inline-block px-2.5 py-0.5 rounded-full bg-[#5F8239] text-[10px] font-bold uppercase tracking-wider mb-1">
+                  Official Hours
+                </span>
+                <p class="text-xs font-bold leading-tight">Mon–Sat: 9AM–5:30PM</p>
+                <p class="text-[11px] text-white/90">Sunday: 1PM–5PM</p>
+              </div>
+            </div>
+            <h3 class="font-bold text-neutral-900 text-base">Verified Clinic Schedule</h3>
+            <p class="text-xs text-neutral-500 mt-1 leading-relaxed">
+              Cut-off at 5:00 PM daily for walk-in consultations and scheduled visits. Call (0976) 485 7648.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-neutral-100 flex items-center justify-between text-xs">
+            <span class="text-neutral-400 font-medium">Grand Plaza Unit 1</span>
+            <span class="text-[#5F8239] font-bold">Open Today</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Pediatric Care (Dino Shades) -->
+        <div class="group bg-white rounded-3xl p-5 border border-neutral-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-neutral-100 mb-4 relative shadow-inner">
+              <img 
+                src="assets/dentacure_patient_kids_glasses.jpg" 
+                alt="Pediatric Patients Wearing Dinosaur Shades" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-[#37542B] shadow-sm">
+                  🦕 Dino Fun Shades
+                </span>
+              </div>
+            </div>
+            <h3 class="font-bold text-neutral-900 text-base">Fear-Free Pediatric Care</h3>
+            <p class="text-xs text-neutral-500 mt-1 leading-relaxed">
+              We turn dental checkups into cheerful milestones with fun sunglasses, patient explanations, and gentle numbing.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-neutral-100 flex items-center justify-between text-xs">
+            <span class="text-neutral-400 font-medium">Pedodontics</span>
+            <span class="text-[#5F8239] font-bold">100% Gentle</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Family Reception Smiles -->
+        <div class="group bg-white rounded-3xl p-5 border border-neutral-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-neutral-100 mb-4 relative shadow-inner">
+              <img 
+                src="assets/dentacure_patient_family_reception.jpg" 
+                alt="Happy Family with Dental Team at Reception" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-[#37542B] shadow-sm">
+                  ❤️ Family Dental Care
+                </span>
+              </div>
+            </div>
+            <h3 class="font-bold text-neutral-900 text-base">The Whole Family Welcomed</h3>
+            <p class="text-xs text-neutral-500 mt-1 leading-relaxed">
+              From routine cleanings to braces for teens, our dedicated team at Sevilla San Fernando makes everyone feel right at home.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-neutral-100 flex items-center justify-between text-xs">
+            <span class="text-neutral-400 font-medium">Reception Suite</span>
+            <span class="text-[#5F8239] font-bold">Family Trusted</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Mother & Toddler Checkup with Staff in Protective Gear -->
+        <div class="group bg-white rounded-3xl p-5 border border-neutral-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-neutral-100 mb-4 relative shadow-inner">
+              <img 
+                src="assets/dentacure_patient_mother_daughter.jpg" 
+                alt="Mother and Daughter with Staff in Protective Gear" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold text-[#37542B] shadow-sm">
+                  ✨ Strict Hygiene
+                </span>
+              </div>
+            </div>
+            <h3 class="font-bold text-neutral-900 text-base">Sterility &amp; Gentle Comfort</h3>
+            <p class="text-xs text-neutral-500 mt-1 leading-relaxed">
+              Hospital-grade autoclave sterilization, certified protective PPE, and attentive one-on-one clinician time for peace of mind.
+            </p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-neutral-100 flex items-center justify-between text-xs">
+            <span class="text-neutral-400 font-medium">Cleanliness Standards</span>
+            <span class="text-[#5F8239] font-bold">Safe Care</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 7.5 FREQUENTLY ASKED QUESTIONS (FAQ) SECTION                              -->
+  <!-- ========================================================================= -->
+  <section id="faq" class="py-16 sm:py-24 bg-[#FAF9F5] border-y border-[#ECE7DE]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center space-y-3 mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-xs font-bold text-[#5F8239] shadow-sm uppercase tracking-wider">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Patient Questions Answered</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-neutral-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          Everything you need to know about our gentle clinical care, orthodontics, appointments, and clinic directions.
+        </p>
+      </div>
+
+      <!-- FAQ Accordion Container -->
+      <div class="space-y-4" id="dc2-faq-container">
+        
+        <!-- Item 1 -->
+        <div class="faq-item-card bg-white rounded-2xl border border-neutral-200/80 shadow-sm overflow-hidden transition-all duration-200 hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base sm:text-lg focus:outline-none" aria-expanded="false">
+            <span>Are dental treatments, cleanings, and extractions painful at DentaCure?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 text-neutral-600 flex items-center justify-center flex-shrink-0 font-bold transition-transform duration-300 text-lg">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="text-neutral-600 text-sm sm:text-base leading-relaxed pb-6 pt-1 border-t border-neutral-100">
+              Not at all. At DentaCure, patient comfort is our top priority. We use modern topical anesthetics and precision local numbing techniques so you feel zero discomfort during dental fillings, deep cleanings, or extractions. For nervous patients, our clinicians explain every step with gentle care.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="faq-item-card bg-white rounded-2xl border border-neutral-200/80 shadow-sm overflow-hidden transition-all duration-200 hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base sm:text-lg focus:outline-none" aria-expanded="false">
+            <span>How long do orthodontic braces or clear aligners take to straighten teeth?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 text-neutral-600 flex items-center justify-center flex-shrink-0 font-bold transition-transform duration-300 text-lg">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="text-neutral-600 text-sm sm:text-base leading-relaxed pb-6 pt-1 border-t border-neutral-100">
+              Treatment duration typically ranges from 12 to 24 months for traditional metal and ceramic braces, depending on bite alignment. Mild-to-moderate orthodontic cases with clear aligners can achieve ideal results in as little as 6 to 12 months. We provide digital 3D scans during your initial consultation so you can preview your expected smile timeline.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="faq-item-card bg-white rounded-2xl border border-neutral-200/80 shadow-sm overflow-hidden transition-all duration-200 hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base sm:text-lg focus:outline-none" aria-expanded="false">
+            <span>Where is DentaCure Dental Clinic located and is parking available?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 text-neutral-600 flex items-center justify-center flex-shrink-0 font-bold transition-transform duration-300 text-lg">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="text-neutral-600 text-sm sm:text-base leading-relaxed pb-6 pt-1 border-t border-neutral-100">
+              We are located at <strong>2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union, Philippines, 2500</strong>. Convenient street-level and building patient parking is available directly in front of Grand Plaza Building. You can explore interactive routes and commute tips on our <a href="directions.html" class="text-[#5F8239] font-bold underline">Google Map &amp; Directions Page</a>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="faq-item-card bg-white rounded-2xl border border-neutral-200/80 shadow-sm overflow-hidden transition-all duration-200 hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base sm:text-lg focus:outline-none" aria-expanded="false">
+            <span>What are your clinic operating hours and how do I schedule a visit?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 text-neutral-600 flex items-center justify-center flex-shrink-0 font-bold transition-transform duration-300 text-lg">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="text-neutral-600 text-sm sm:text-base leading-relaxed pb-6 pt-1 border-t border-neutral-100">
+              Our clinic hours are <strong>Monday to Saturday from 9:00 AM to 5:30 PM</strong>, and <strong>Sunday from 1:00 PM to 5:00 PM</strong>. Please note that our <em>daily cut-off for appointments and walk-ins is 5:00 PM</em>. You can reserve your slot online using the <button data-action="open-booking" class="text-[#5F8239] font-bold underline">Book Online</button> button or call/text us directly at <strong>(0976) 485 7648</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="faq-item-card bg-white rounded-2xl border border-neutral-200/80 shadow-sm overflow-hidden transition-all duration-200 hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base sm:text-lg focus:outline-none" aria-expanded="false">
+            <span>Do you offer flexible installment payment plans or family discounts?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 text-neutral-600 flex items-center justify-center flex-shrink-0 font-bold transition-transform duration-300 text-lg">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="text-neutral-600 text-sm sm:text-base leading-relaxed pb-6 pt-1 border-t border-neutral-100">
+              Yes! We believe premium dental healthcare should be accessible to all families. We offer 0% interest monthly installment packages for orthodontic braces, porcelain crowns, and dental implants, along with a 20% discount on our Family Care Annual Package.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="faq-item-card bg-white rounded-2xl border border-neutral-200/80 shadow-sm overflow-hidden transition-all duration-200 hover:border-[#5F8239]/40">
+          <button class="faq-toggle-btn w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base sm:text-lg focus:outline-none" aria-expanded="false">
+            <span>How long do professional cold-light laser teeth whitening results last?</span>
+            <span class="faq-icon w-8 h-8 rounded-full bg-neutral-100 text-neutral-600 flex items-center justify-center flex-shrink-0 font-bold transition-transform duration-300 text-lg">+</span>
+          </button>
+          <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+            <p class="text-neutral-600 text-sm sm:text-base leading-relaxed pb-6 pt-1 border-t border-neutral-100">
+              Our in-clinic cold-light whitening brightens teeth by 5 to 8 shades in a single 45-minute appointment. With regular oral hygiene and touch-up maintenance, results typically last 2 to 3 years.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Assistance Footer -->
+      <div class="mt-10 text-center text-xs sm:text-sm text-neutral-500">
+        <span>Have another question? Reach our team directly via </span>
+        <a href="tel:09764857648" class="text-[#5F8239] font-bold hover:underline">(0976) 485 7648</a>
+        <span> or </span>
+        <a href="mailto:toothdcarelu@gmail.com" class="text-[#5F8239] font-bold hover:underline">toothdcarelu@gmail.com</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 8. BOTTOM CTA BANNER: SEIZE THE OPPORTUNITY (with Smiling Woman Cutout)    -->
+  <!-- ========================================================================= -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Full-Width Rounded Container with Theme Gradient -->
+      <div class="theme-cta-gradient rounded-[32px] sm:rounded-[40px] text-white overflow-hidden shadow-2xl relative">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left Column: Copy & Booking Buttons (7 cols) -->
+          <div class="lg:col-span-7 p-8 sm:p-12 lg:p-16 space-y-6">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+              Seize the opportunity for a brighter smile starting now!
+            </h2>
+            <p class="text-white/90 text-sm sm:text-base leading-relaxed max-w-lg font-normal">
+              Embracing the bliss of fewer moments, unlocking the gateway to a brighter shine. Captivating Smile Beyond Your Wildest Dreams!
+            </p>
+
+            <div class="pt-4 flex flex-wrap items-center gap-4">
+              <!-- Schedule Outline Button -->
+              <button data-action="open-booking" class="px-6 py-3 rounded-full border-2 border-white/80 text-white font-semibold text-sm hover:bg-white/10 transition">
+                Schedule
+              </button>
+              <!-- Book Here Solid White Button -->
+              <button data-action="open-booking" class="px-7 py-3 rounded-full bg-white text-neutral-900 font-bold text-sm hover:bg-neutral-100 transition shadow-lg flex items-center gap-2">
+                Book Here <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Studio Cutout Photograph of Smiling Woman (5 cols) -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end items-end pr-0 lg:pr-10 relative">
+            <div class="w-full max-w-[360px] sm:max-w-[420px] aspect-square flex items-end justify-center">
+              <img 
+                src="assets/cta_smiling_woman.png" 
+                alt="Radiant Smiling Patient" 
+                class="w-full h-auto object-contain select-none filter drop-shadow-2xl translate-y-2 lg:translate-y-4"
+              />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 9. GOOGLE MAP DIRECTIONS & LOCATION SECTION                               -->
+  <!-- ========================================================================= -->
+  <section id="location" class="py-16 sm:py-24 bg-white border-t border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3E4] border border-[#D5E6CA] text-[#426123] text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Clinic Location &amp; Directions</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+          Visit Us at Grand Plaza Building, Sevilla
+        </h2>
+        <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+          2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union. Easy highway access, turn-by-turn navigation, and dedicated patient parking.
+        </p>
+      </div>
+
+      <!-- Google Map Card, Schedule Graphic & Route Info Box Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
+        
+        <!-- Interactive Map Embed Frame (7 cols) -->
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-neutral-200 shadow-xl shadow-neutral-100 min-h-[380px] sm:min-h-[440px] relative bg-neutral-100">
+          <iframe 
+            src="https://maps.google.com/maps?q=Grand+Plaza+Building,+Sevilla,+San+Fernando+City,+La+Union,+Philippines&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0; min-height: 380px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map Directions to DentaCure Dental Clinic at Grand Plaza Sevilla"
+            class="w-full h-full object-cover">
+          </iframe>
+
+          <!-- Floating Launch Badge -->
+          <div class="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-auto bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-neutral-100 flex items-center justify-between gap-4">
+            <div>
+              <p class="text-xs font-bold text-neutral-900">Grand Plaza Building • Unit 1</p>
+              <p class="text-[11px] text-neutral-500">2nd Floor, Brgy. Sevilla, San Fernando City</p>
+            </div>
+            <a 
+              href="https://www.google.com/maps/dir/?api=1&destination=Grand+Plaza+Building+Sevilla+San+Fernando+City+La+Union+Philippines" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="px-4 py-2 rounded-full bg-[#5F8239] text-white text-xs font-bold hover:bg-[#4E6D2D] transition shadow-sm flex items-center gap-1.5 whitespace-nowrap">
+              <span>Directions</span>
+              <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Clinic Details, Hours Poster & Routing Card (5 cols) -->
+        <div class="lg:col-span-5 bg-[#FAF9F5] border border-[#ECE7DE] rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#5F8239]">
+                  <i data-lucide="map" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-neutral-900 text-lg">DentaCure Dental Clinic</h3>
+                  <p class="text-xs text-neutral-400">San Fernando City, La Union, 2500</p>
+                </div>
+              </div>
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#EBF3E4] text-[#37542B] text-[11px] font-bold">
+                Unit 1 • 2nd Flr
+              </span>
+            </div>
+
+            <!-- Official Location Box -->
+            <div class="p-4 rounded-2xl bg-white border border-neutral-100 text-xs sm:text-sm text-neutral-700 space-y-1 shadow-sm">
+              <p class="font-bold text-neutral-900 flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-[#5F8239]"></i>
+                <span>Official Clinic Address:</span>
+              </p>
+              <p class="font-medium text-neutral-800 pl-5">2nd Floor, Unit 1, Grand Plaza Building</p>
+              <p class="text-neutral-600 pl-5">Brgy. Sevilla, San Fernando City</p>
+              <p class="text-neutral-500 pl-5">La Union, Philippines, 2500</p>
+            </div>
+
+            <!-- Hours Schedule from Official Poster -->
+            <div class="p-4 rounded-2xl bg-white border border-neutral-100 space-y-2.5 text-xs shadow-sm">
+              <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+                <span class="font-bold text-neutral-900 flex items-center gap-1.5">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-[#5F8239]"></i>
+                  <span>Clinic Hours:</span>
+                </span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#5F8239] bg-[#EBF3E4] px-2 py-0.5 rounded-full">Official Schedule</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-100">
+                <span class="font-medium text-neutral-600">Monday to Saturday:</span>
+                <span class="font-bold text-neutral-900">9:00 AM – 5:30 PM</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-100">
+                <span class="font-medium text-neutral-600">Sunday:</span>
+                <span class="font-bold text-[#5F8239]">1:00 PM – 5:00 PM</span>
+              </div>
+              <div class="p-2 rounded-xl bg-[#FFFBEB] border border-[#FDE68A] text-[#92400E] text-[11px] font-semibold flex items-center gap-1.5">
+                <i data-lucide="alert-circle" class="w-3.5 h-3.5 flex-shrink-0"></i>
+                <span>Appointment &amp; Walk-in Cut-off: 5:00 PM daily</span>
+              </div>
+              <div class="flex justify-between items-center pt-1 text-neutral-600">
+                <span>Free Patient Parking:</span>
+                <span class="font-bold text-neutral-900">Grand Plaza Front Bays</span>
+              </div>
+            </div>
+
+            <!-- Contact Link Quick Row -->
+            <a href="tel:09764857648" class="flex items-center justify-between p-3 rounded-2xl bg-white border border-neutral-200/80 text-xs hover:border-[#5F8239] transition">
+              <div class="flex items-center gap-2.5">
+                <div class="w-7 h-7 rounded-full bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold">
+                  <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                </div>
+                <div>
+                  <p class="text-[10px] text-neutral-400">Direct Inquiries &amp; Booking</p>
+                  <p class="font-bold text-neutral-900 text-xs">(0976) 485 7648</p>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold text-[#5F8239] hover:underline">Call Now →</span>
+            </a>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <a 
+              href="https://www.google.com/maps/dir/?api=1&destination=Grand+Plaza+Building+Sevilla+San+Fernando+City+La+Union+Philippines" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full py-3.5 px-6 rounded-full bg-[#5F8239] text-white font-bold text-sm hover:bg-[#4E6D2D] transition shadow-md flex items-center justify-center gap-2">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Get Directions in Google Maps</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+
+            <a 
+              href="directions.html" 
+              class="w-full py-3 px-6 rounded-full bg-white border border-neutral-300 text-neutral-800 font-semibold text-xs hover:bg-neutral-50 transition flex items-center justify-center gap-2">
+              <span>View Full Transit Guide, Landmarks &amp; Commute</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 10. CLEAN WHITE FOOTER                                                    -->
+  <!-- ========================================================================= -->
+  <footer class="bg-white border-t border-neutral-100 pt-16 pb-12 text-neutral-600 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Grid: Brand & Multi-Column Links -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-neutral-100">
+        
+        <!-- Brand Summary (2 cols on lg) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-2.5">
+            <a href="index.html" class="block">
+              <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+            </a>
+          </div>
+          <p class="text-neutral-500 text-xs sm:text-sm max-w-sm leading-relaxed">
+            2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union, Philippines, 2500.
+          </p>
+
+          <!-- Social Media Icons Row -->
+          <div class="flex items-center gap-3 pt-2 text-neutral-400">
+            <a href="#" class="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center hover:text-neutral-900 hover:border-neutral-400 transition">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center hover:text-neutral-900 hover:border-neutral-400 transition">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://maps.google.com/maps?q=Grand+Plaza+Building,+Sevilla,+San+Fernando+City,+La+Union,+Philippines" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center hover:text-[#5F8239] hover:border-[#5F8239] transition" title="View on Google Maps">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: Phone & Email -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-sm uppercase tracking-wider">Contact</h4>
+          <div class="space-y-1">
+            <p class="text-xs text-neutral-400">Call / Text / Booking</p>
+            <p id="footer-phone-text" class="text-xs font-semibold text-neutral-800">(0976) 485 7648</p>
+          </div>
+          <div class="space-y-1 pt-1">
+            <p class="text-xs text-neutral-400">Email Inquiries</p>
+            <p id="footer-email-text" class="text-xs font-semibold text-neutral-800">toothdcarelu@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Col 2: About Us -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-sm uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="services.html" class="hover:text-neutral-900 transition">Our Services</a></li>
+            <li><a href="dentists.html" class="hover:text-neutral-900 transition">Our Dentists</a></li>
+            <li><a href="before-after.html" class="hover:text-neutral-900 transition">Before &amp; After</a></li>
+            <li><a href="reviews.html" class="hover:text-neutral-900 transition">Patient Reviews</a></li>
+            <li><a href="faq.html" class="hover:text-neutral-900 transition font-semibold text-[#5F8239]">FAQ Section</a></li>
+            <li><a href="directions.html" class="hover:text-neutral-900 transition font-semibold text-[#5F8239]">Map &amp; Directions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal & Location -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-sm uppercase tracking-wider">Information</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="directions.html" class="hover:text-neutral-900 transition">Grand Plaza Clinic</a></li>
+            <li><a href="#" class="hover:text-neutral-900 transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-neutral-900 transition">Terms of Services</a></li>
+            <li><a href="#home" class="hover:text-neutral-900 transition">Back to Top ↑</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Strip: App Downloads, Working Hours & Clinic Address -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-neutral-500">
+        
+        <!-- App Store Buttons -->
+        <div class="flex items-center gap-3">
+          <span class="font-semibold text-neutral-700">Get the app:</span>
+          <div class="flex items-center gap-2">
+            <button class="px-3 py-1.5 rounded-lg border border-neutral-200 bg-neutral-50 text-[11px] font-semibold text-neutral-700 hover:bg-neutral-100 flex items-center gap-1.5">
+              <i data-lucide="apple" class="w-3.5 h-3.5"></i> App Store
+            </button>
+            <button class="px-3 py-1.5 rounded-lg border border-neutral-200 bg-neutral-50 text-[11px] font-semibold text-neutral-700 hover:bg-neutral-100 flex items-center gap-1.5">
+              <i data-lucide="play" class="w-3.5 h-3.5"></i> Google Play
+            </button>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="text-center sm:text-left">
+          <span class="font-semibold text-neutral-700">Clinic Hours:</span> Mon–Sat: 9:00 AM – 5:30 PM | Sun: 1:00 PM – 5:00 PM (Cut-off: 5:00 PM)
+        </div>
+
+        <!-- Location Text -->
+        <div class="text-center sm:text-right max-w-xs">
+          <span id="footer-location-text" class="text-neutral-500 font-medium">
+            2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union, 2500
+          </span>
+        </div>
+
+      </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL 1: BOOK ONLINE APPOINTMENT FORM                                     -->
+  <!-- ========================================================================= -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div id="booking-modal-backdrop" class="modal-backdrop absolute inset-0"></div>
+    
+    <div class="relative bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl z-10 overflow-hidden border border-neutral-100">
+      
+      <!-- Close Button -->
+      <button id="close-booking-modal" class="absolute top-5 right-5 text-neutral-400 hover:text-neutral-700 p-1.5 rounded-full hover:bg-neutral-100 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-6">
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold theme-badge mb-2">
+          Direct Reservation Portal
+        </span>
+        <h3 class="text-2xl font-bold text-neutral-900">Schedule Your Dental Visit</h3>
+        <p class="text-xs sm:text-sm text-neutral-500 mt-1">
+          Pick your preferred service, date, and appointment slot.
+        </p>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="appointment-form" class="space-y-4">
+        
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1">Full Name</label>
+          <input type="text" required placeholder="e.g. Maria Santos" class="w-full px-4 py-2.5 rounded-xl border border-neutral-200 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1">Contact Number</label>
+            <input type="tel" required placeholder="0976 485 7648" class="w-full px-4 py-2.5 rounded-xl border border-neutral-200 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1">Email Address</label>
+            <input type="email" required placeholder="name@email.com" class="w-full px-4 py-2.5 rounded-xl border border-neutral-200 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1">Treatment / Procedure</label>
+          <select required class="w-full px-4 py-2.5 rounded-xl border border-neutral-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-neutral-900">
+            <option value="braces">Orthodontics & Clear Braces</option>
+            <option value="checkup">Vibrant Checkups & Consultation</option>
+            <option value="cleaning">Revitalized Ultrasonic Cleaning</option>
+            <option value="fillings">Reinforced Composite Fillings</option>
+            <option value="surgery">Oral Surgery & Implantology</option>
+            <option value="pedodontics">Pedodontics (Children Dental)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1">Preferred Date</label>
+          <input type="date" required class="w-full px-4 py-2.5 rounded-xl border border-neutral-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-neutral-900">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1">Available Time Slot (Daily cut-off: 5:00 PM)</label>
+          <div class="grid grid-cols-3 gap-2">
+            <button type="button" class="time-slot-btn px-2.5 py-2 text-xs font-semibold rounded-lg border border-neutral-200 hover:bg-neutral-50" data-time="09:30 AM">09:30 AM</button>
+            <button type="button" class="time-slot-btn px-2.5 py-2 text-xs font-semibold rounded-lg border border-neutral-200 hover:bg-neutral-50 theme-accent-bg text-white" data-time="11:00 AM">11:00 AM</button>
+            <button type="button" class="time-slot-btn px-2.5 py-2 text-xs font-semibold rounded-lg border border-neutral-200 hover:bg-neutral-50" data-time="01:30 PM">01:30 PM</button>
+            <button type="button" class="time-slot-btn px-2.5 py-2 text-xs font-semibold rounded-lg border border-neutral-200 hover:bg-neutral-50" data-time="03:00 PM">03:00 PM</button>
+            <button type="button" class="time-slot-btn px-2.5 py-2 text-xs font-semibold rounded-lg border border-neutral-200 hover:bg-neutral-50" data-time="04:00 PM">04:00 PM</button>
+            <button type="button" class="time-slot-btn px-2.5 py-2 text-xs font-semibold rounded-lg border border-neutral-200 hover:bg-neutral-50" data-time="04:45 PM">04:45 PM</button>
+          </div>
+          <input type="hidden" id="selected-time-slot" value="11:00 AM">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1">Special Notes (Optional)</label>
+          <textarea rows="2" placeholder="Any dental anxiety, previous treatments, or symptoms..." class="w-full px-4 py-2 rounded-xl border border-neutral-200 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-900"></textarea>
+        </div>
+
+        <button type="submit" class="w-full btn-pill-primary py-3 text-sm font-bold tracking-wide mt-2">
+          Confirm Appointment Request
+        </button>
+
+      </form>
+
+      <!-- Success State -->
+      <div id="booking-success-state" class="hidden text-center py-8 space-y-4">
+        <div class="w-16 h-16 rounded-full theme-accent-soft-bg text-neutral-900 mx-auto flex items-center justify-center">
+          <i data-lucide="check-circle" class="w-8 h-8 theme-accent"></i>
+        </div>
+        <h4 class="text-2xl font-bold text-neutral-900">Appointment Requested!</h4>
+        <p class="text-sm text-neutral-600 max-w-xs mx-auto leading-relaxed">
+          Your request has been received. Our clinic concierge will text/call to verify your slot.
+        </p>
+        <div class="p-3 bg-neutral-50 rounded-xl border border-neutral-200 inline-block">
+          <span class="text-xs text-neutral-400 block uppercase font-bold">Booking Reference</span>
+          <span id="booking-ref-code" class="text-base font-mono font-bold text-neutral-900">DC2-2026-8819</span>
+        </div>
+        <div class="pt-4">
+          <button onclick="document.getElementById('booking-modal').classList.add('hidden')" class="btn-pill-primary px-8 py-2.5 text-sm font-semibold">
+            Done
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL 2: DOCTOR BIO & CREDENTIALS                                         -->
+  <!-- ========================================================================= -->
+  <div id="doctor-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div id="doctor-modal-backdrop" class="modal-backdrop absolute inset-0"></div>
+    <div class="relative bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl z-10 border border-neutral-100">
+      <button id="close-doctor-modal" class="absolute top-4 right-4 text-neutral-400 hover:text-neutral-700 p-1.5 rounded-full hover:bg-neutral-100">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="text-center space-y-4">
+        <img id="doc-modal-img" src="" alt="Doctor" class="w-28 h-28 rounded-full object-cover mx-auto ring-4 ring-neutral-100 shadow-md">
+        <div>
+          <h3 id="doc-modal-name" class="text-xl font-bold text-neutral-900"></h3>
+          <p id="doc-modal-role" class="text-xs font-semibold theme-accent"></p>
+          <p id="doc-modal-credentials" class="text-[11px] text-neutral-400 mt-0.5"></p>
+        </div>
+        <p id="doc-modal-bio" class="text-xs sm:text-sm text-neutral-600 leading-relaxed text-left bg-neutral-50 p-4 rounded-2xl border border-neutral-100"></p>
+        <button data-action="open-booking" class="w-full btn-pill-primary py-2.5 text-xs font-bold">
+          Book Appointment with Doctor
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL 3: FAMILY DISCOUNT PLAN                                             -->
+  <!-- ========================================================================= -->
+  <div id="discount-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div id="discount-modal-backdrop" class="modal-backdrop absolute inset-0"></div>
+    <div class="relative bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl z-10 border border-neutral-100 space-y-5">
+      <button id="close-discount-modal" class="absolute top-4 right-4 text-neutral-400 hover:text-neutral-700 p-1.5 rounded-full hover:bg-neutral-100">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div>
+        <span class="theme-badge px-3 py-1 rounded-full text-xs font-bold">Membership Plan</span>
+        <h3 class="text-2xl font-bold text-neutral-900 mt-2">Family Dental Savings Plan</h3>
+        <p class="text-xs sm:text-sm text-neutral-500 mt-1">
+          No insurance waiting periods, no maximums, zero deductibles.
+        </p>
+      </div>
+      <div class="space-y-3 text-xs sm:text-sm">
+        <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+          <i data-lucide="check" class="w-5 h-5 theme-accent shrink-0"></i>
+          <span><strong>80% Off:</strong> Initial comprehensive oral examination, x-rays & prophylaxis.</span>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+          <i data-lucide="check" class="w-5 h-5 theme-accent shrink-0"></i>
+          <span><strong>40% Off:</strong> Orthodontics, composite fillings, crowns & oral surgery.</span>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+          <i data-lucide="check" class="w-5 h-5 theme-accent shrink-0"></i>
+          <span><strong>Priority Scheduling:</strong> Emergency appointments within 2 hours.</span>
+        </div>
+      </div>
+      <button data-action="open-booking" class="w-full btn-pill-primary py-3 text-sm font-bold">
+        Enroll Family Plan Today
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Script Initializer -->
+  <script src="app.js"></script>
+  <script>
+    // Initialize Lucide icon replacements
+    lucide.createIcons();
+  </script>
+</body>
+</html>

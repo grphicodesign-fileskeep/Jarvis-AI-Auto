@@ -1,0 +1,557 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dentacure">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Map Directions &amp; Landmark Guide — DentaCure Dental Clinic La Union</title>
+  <meta name="description" content="Step-by-step Google Maps directions, transit routes, and parking guide to DentaCure Dental Clinic at 2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              green: '#37542B',
+              olive: '#4E7837',
+              sage: '#82A769',
+              blue: '#178782', // Replaced blue with Video Oceanic Teal
+              teal: '#178782',
+              aqua: '#229891',
+              mint: '#6DC4C4',
+              dark: '#1A1A1A',
+              cardDark: '#242424',
+              cream: '#FAF9F5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased selection:bg-neutral-200 min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================================================= -->
+  <!-- 1. STICKY NAVIGATION BAR                                                  -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-100 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div id="navbar-logo-icon" class="flex items-center justify-center transition-transform group-hover:scale-105">
+          <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+        </div>
+      </a>
+
+      <!-- Centered Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-600">
+        <a href="index.html" class="nav-link hover:text-neutral-900 transition">Home</a>
+        <a href="services.html" class="nav-link hover:text-neutral-900 transition">Our Services</a>
+        <a href="dentists.html" class="nav-link hover:text-neutral-900 transition">Our Dentists</a>
+        <a href="before-after.html" class="nav-link hover:text-neutral-900 transition">Before &amp; After</a>
+        <a href="reviews.html" class="nav-link hover:text-neutral-900 transition">Reviews</a>
+        <a href="faq.html" class="nav-link hover:text-neutral-900 transition">FAQ</a>
+        <a href="directions.html" class="nav-link text-neutral-900 font-bold border-b-2 border-[#5F8239] pb-1 flex items-center gap-1 text-[#5F8239]">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Directions</span>
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <!-- Direct Call Quick Pill -->
+        <a href="tel:09764857648" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-full border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 text-neutral-800 transition shadow-sm">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#5F8239]"></i>
+          <span>(0976) 485 7648</span>
+        </a>
+
+        <!-- Book Online Solid Pill CTA -->
+        <a href="booking.html" class="btn-pill-primary px-6 py-2.5 text-sm font-semibold tracking-wide">
+          Book Online
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-neutral-100 bg-white px-6 py-4 space-y-3 shadow-xl">
+      <a href="index.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Home</a>
+      <a href="services.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Services</a>
+      <a href="dentists.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Dentists</a>
+      <a href="before-after.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Before &amp; After Transformations</a>
+      <a href="reviews.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Patient Reviews</a>
+      <a href="faq.html" class="mobile-nav-link block text-base font-medium text-neutral-600">FAQ</a>
+      <a href="directions.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">📍 Google Map &amp; Directions</a>
+      <a href="booking.html" class="mobile-nav-link block text-base font-bold text-neutral-900 bg-[#EBF3E4] px-3 py-2 rounded-xl">📅 Book Appointment Online</a>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. DIRECTIONS HERO HEADER                                                 -->
+  <!-- ========================================================================= -->
+  <section class="relative pt-12 pb-10 bg-gradient-to-b from-[#FAF9F5] to-white border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-neutral-400 mb-4 uppercase tracking-wider">
+        <a href="index.html" class="hover:text-neutral-700 transition">Home</a>
+        <span>/</span>
+        <span class="theme-accent">Google Map &amp; Directions</span>
+      </nav>
+
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+        <div class="max-w-3xl space-y-3">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3E4] border border-[#D5E6CA] text-[#426123] text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Grand Plaza Building • Brgy. Sevilla, San Fernando City</span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-[58px] font-extrabold tracking-tight text-neutral-900 leading-[1.12]">
+            Finding Your Way to <span class="theme-accent">DentaCure</span>
+          </h1>
+          <p class="text-neutral-500 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+            Conveniently located along McArthur Highway in Brgy. Sevilla, San Fernando City, La Union. Ground floor tenant is <strong>Technoblitz Computer Store</strong>, with direct landmarks near <strong>ILAW ATBP.</strong>, <strong>TESDA</strong>, and <strong>DMMSU</strong>.
+          </p>
+        </div>
+
+        <!-- Direct Navigation Launcher Button -->
+        <div class="flex-shrink-0">
+          <a 
+            href="https://www.google.com/maps/dir/?api=1&destination=Grand+Plaza+Building+Sevilla+San+Fernando+City+La+Union+Philippines" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#5F8239] text-white font-bold text-sm hover:bg-[#4E6D2D] transition shadow-lg shadow-[#5F8239]/25 hover:scale-[1.02]">
+            <i data-lucide="navigation" class="w-4 h-4"></i>
+            <span>Open in Google Maps App</span>
+            <i data-lucide="external-link" class="w-4 h-4 opacity-80"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. OFFICIAL ROADMAP & SATELLITE MAP GRID                                  -->
+  <!-- ========================================================================= -->
+  <section class="py-12 sm:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Top Double-Visual: Official Road Map & Interactive Google Map -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Official Clinic Landmark Roadmap Graphic (6 cols) -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-neutral-900 text-base flex items-center gap-2">
+              <i data-lucide="map" class="w-4 h-4 text-[#5F8239]"></i>
+              <span>Official Landmark Roadmap</span>
+            </h3>
+            <span class="text-xs text-neutral-400 font-semibold">Sevilla Highway Corridor</span>
+          </div>
+
+          <div class="relative rounded-3xl overflow-hidden border-2 border-neutral-200 shadow-xl bg-neutral-50 group">
+            <img 
+              src="assets/dentacure_landmark_map.png" 
+              alt="DentaCure Landmark Map showing Grand Plaza Building, TESDA, DMMSU, and ILAW ATBP." 
+              class="w-full h-[400px] object-contain bg-white transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+            <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-neutral-100 flex items-center justify-between text-xs">
+              <span class="font-bold text-neutral-800">📍 2nd Floor, Unit 1 Grand Plaza</span>
+              <span class="text-[#5F8239] font-bold">Above Technoblitz</span>
+            </div>
+          </div>
+
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            Highlighted landmarks on map: <strong>TESDA</strong>, <strong>DMMSU</strong>, and <strong>ILAW ATBP.</strong> directly along the National McArthur Highway corridor.
+          </p>
+        </div>
+
+        <!-- Right: Interactive Google Maps Embed (6 cols) -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-neutral-900 text-base flex items-center gap-2">
+              <i data-lucide="navigation" class="w-4 h-4 text-[#5F8239]"></i>
+              <span>Live Google Maps Satellite / GPS</span>
+            </h3>
+            <a 
+              href="https://maps.google.com/maps?q=Grand+Plaza+Building,+Sevilla,+San+Fernando+City,+La+Union,+Philippines" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="text-xs font-bold text-[#5F8239] hover:underline flex items-center gap-1">
+              <span>Enlarge</span>
+              <i data-lucide="external-link" class="w-3 h-3"></i>
+            </a>
+          </div>
+
+          <div class="relative w-full h-[400px] rounded-3xl overflow-hidden border-2 border-neutral-200 shadow-xl bg-neutral-100">
+            <iframe 
+              src="https://maps.google.com/maps?q=Grand+Plaza+Building,+Sevilla,+San+Fernando+City,+La+Union,+Philippines&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Map Directions to DentaCure Dental Clinic Grand Plaza Sevilla"
+              class="w-full h-full object-cover">
+            </iframe>
+
+            <!-- Quick Action Floating Badge -->
+            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-neutral-100 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold">
+                  <i data-lucide="map-pin" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-neutral-900">Grand Plaza Building • Unit 1</h4>
+                  <p class="text-[11px] text-neutral-500">2nd Floor, Brgy. Sevilla, San Fernando City</p>
+                </div>
+              </div>
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=Grand+Plaza+Building+Sevilla+San+Fernando+City+La+Union+Philippines" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="px-4 py-2 rounded-full bg-[#5F8239] text-white text-xs font-bold hover:bg-[#4E6D2D] transition flex items-center gap-1 whitespace-nowrap shadow-sm">
+                <span>Start</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <p class="text-xs text-neutral-500">
+            Postal Code: <strong>2500</strong> • San Fernando City, La Union, Philippines
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- Address & Working Hours Strip -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Box 1: Address Details -->
+        <div class="bg-[#FAF9F5] border border-[#ECE7DE] rounded-3xl p-6 space-y-3 shadow-sm">
+          <div class="w-10 h-10 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#5F8239]">
+            <i data-lucide="building" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-neutral-900 text-sm">Official Physical Address</h4>
+          <p class="text-xs text-neutral-600 leading-relaxed">
+            <strong>DentaCure Dental Clinic</strong><br>
+            2nd Floor, Unit 1, Grand Plaza Building<br>
+            Brgy. Sevilla, San Fernando City<br>
+            La Union, Philippines, 2500
+          </p>
+          <div class="pt-2 text-[11px] text-neutral-500 border-t border-neutral-200">
+            Building Landmark: Above Technoblitz Computer Store
+          </div>
+        </div>
+
+        <!-- Box 2: Operating Schedule -->
+        <div class="bg-[#FAF9F5] border border-[#ECE7DE] rounded-3xl p-6 space-y-3 shadow-sm">
+          <div class="w-10 h-10 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#5F8239]">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-neutral-900 text-sm">Clinical Hours &amp; Cut-Off</h4>
+          <div class="space-y-1.5 text-xs text-neutral-600">
+            <div class="flex justify-between">
+              <span>Monday – Saturday:</span>
+              <strong class="text-neutral-900">9:00 AM – 5:30 PM</strong>
+            </div>
+            <div class="flex justify-between">
+              <span>Sunday:</span>
+              <strong class="text-[#5F8239]">1:00 PM – 5:00 PM</strong>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-[#EBF3E4] text-[#37542B] text-[11px] font-bold flex items-center gap-1.5">
+            <i data-lucide="alert-circle" class="w-3.5 h-3.5 shrink-0"></i>
+            <span>Daily Cut-off for Walk-ins: 5:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Box 3: Hotlines & Direct Inquiries -->
+        <div class="bg-[#FAF9F5] border border-[#ECE7DE] rounded-3xl p-6 space-y-3 shadow-sm">
+          <div class="w-10 h-10 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#5F8239]">
+            <i data-lucide="phone-call" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-neutral-900 text-sm">Direct Clinical Contacts</h4>
+          <div class="space-y-2 text-xs">
+            <a href="tel:09764857648" class="flex items-center justify-between p-2 rounded-xl bg-white border border-neutral-200 hover:border-[#5F8239] transition">
+              <span class="text-neutral-500">Mobile / Viber / WhatsApp:</span>
+              <strong class="text-neutral-900">(0976) 485 7648</strong>
+            </a>
+            <a href="tel:0726108681" class="flex items-center justify-between p-2 rounded-xl bg-white border border-neutral-200 hover:border-[#5F8239] transition">
+              <span class="text-neutral-500">Landline:</span>
+              <strong class="text-neutral-900">072 6108 681</strong>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. STEP-BY-STEP COMMUTE & TRANSIT GUIDE                                   -->
+  <!-- ========================================================================= -->
+  <section class="py-14 sm:py-20 bg-[#FAF9F5] border-y border-[#ECE7DE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          How to Reach DentaCure Sevilla
+        </h2>
+        <p class="text-neutral-500 text-sm sm:text-base">
+          Detailed driving directions and public commute guidelines from anywhere in La Union.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Mode 1: Private Car / Motorcycle -->
+        <div class="bg-white rounded-3xl p-8 border border-neutral-200 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center">
+              <i data-lucide="car" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-neutral-900 text-lg">By Car or Motorcycle</h3>
+            <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+              Drive along McArthur Highway into Brgy. Sevilla. Look for <strong>Grand Plaza Building</strong> located along the main road. The ground floor displays prominent signage for <strong>Technoblitz Computer Store</strong>.
+            </p>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-neutral-50 border border-neutral-100 text-xs text-neutral-600">
+            <span class="font-bold text-neutral-900 block mb-1">🅿️ Dedicated Parking:</span>
+            Convenient street-level parking bays available right in front of Grand Plaza Building for all dental patients.
+          </div>
+        </div>
+
+        <!-- Mode 2: Public Commute (Jeepney / Tricycle) -->
+        <div class="bg-white rounded-3xl p-8 border border-neutral-200 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center">
+              <i data-lucide="bus" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-neutral-900 text-lg">By Jeepney or Tricycle</h3>
+            <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+              From San Fernando City Plaza or Market, board any southbound jeepney (bound for Bauang, Caba, or Aringay) and ask the driver to drop you at <strong>Grand Plaza Building in Sevilla</strong>, across <strong>ILAW ATBP.</strong>
+            </p>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-neutral-50 border border-neutral-100 text-xs text-neutral-600">
+            <span class="font-bold text-neutral-900 block mb-1">🚏 Landmark Drop-off:</span>
+            Tell the driver or tricycle operator: <em>"Grand Plaza Building Sevilla tapat ng ILAW ATBP. / taas ng Technoblitz."</em>
+          </div>
+        </div>
+
+        <!-- Mode 3: Landmarks Distance -->
+        <div class="bg-white rounded-3xl p-8 border border-neutral-200 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-neutral-900 text-lg">Estimated Travel Times</h3>
+            <div class="space-y-2.5 text-xs text-neutral-600">
+              <div class="flex justify-between items-center pb-2 border-b border-neutral-100">
+                <span>ILAW ATBP. &amp; TESDA Sevilla</span>
+                <span class="font-bold text-neutral-900">Directly Opposite / Walking</span>
+              </div>
+              <div class="flex justify-between items-center pb-2 border-b border-neutral-100">
+                <span>DMMSU Mid La Union Campus</span>
+                <span class="font-bold text-neutral-900">2 mins (800 m)</span>
+              </div>
+              <div class="flex justify-between items-center pb-2 border-b border-neutral-100">
+                <span>San Fernando City Plaza</span>
+                <span class="font-bold text-neutral-900">4 mins (1.6 km)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Bauang Town Proper</span>
+                <span class="font-bold text-neutral-900">8 mins (5.1 km)</span>
+              </div>
+            </div>
+          </div>
+          <a 
+            href="https://www.google.com/maps/dir/?api=1&destination=Grand+Plaza+Building+Sevilla+San+Fernando+City+La+Union+Philippines" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-xs font-bold text-[#5F8239] hover:underline flex items-center gap-1 justify-center pt-2">
+            <span>Calculate route from your exact location</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. LOCATION & PARKING FAQ                                                 -->
+  <!-- ========================================================================= -->
+  <section class="py-14 sm:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-10 space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          Directions &amp; Parking FAQ
+        </h2>
+        <p class="text-neutral-500 text-sm">
+          Quick answers to common arrival and visit questions.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Q1 -->
+        <div class="border border-neutral-200 rounded-2xl p-5 sm:p-6 transition hover:border-[#5F8239]/40 bg-[#FAF9F5]">
+          <h3 class="font-bold text-neutral-900 text-base mb-2 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center text-xs font-bold">1</span>
+            <span>Where is parking located at Grand Plaza Building?</span>
+          </h3>
+          <p class="text-neutral-600 text-sm leading-relaxed pl-8">
+            Complimentary street-level parking spaces are available directly in front of Grand Plaza Building for all DentaCure patients. Dedicated motorcycle parking bays are also provided.
+          </p>
+        </div>
+
+        <!-- Q2 -->
+        <div class="border border-neutral-200 rounded-2xl p-5 sm:p-6 transition hover:border-[#5F8239]/40 bg-[#FAF9F5]">
+          <h3 class="font-bold text-neutral-900 text-base mb-2 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center text-xs font-bold">2</span>
+            <span>How do I access Unit 1 on the 2nd Floor?</span>
+          </h3>
+          <p class="text-neutral-600 text-sm leading-relaxed pl-8">
+            Enter the main entrance of Grand Plaza Building beside Technoblitz Computer Store and take the stairs to the <strong>2nd Floor</strong>. Unit 1 is the first clinic suite with clear DentaCure glass signage.
+          </p>
+        </div>
+
+        <!-- Q3 -->
+        <div class="border border-neutral-200 rounded-2xl p-5 sm:p-6 transition hover:border-[#5F8239]/40 bg-[#FAF9F5]">
+          <h3 class="font-bold text-neutral-900 text-base mb-2 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-full bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center text-xs font-bold">3</span>
+            <span>Do you accept walk-in patients or are appointments required?</span>
+          </h3>
+          <p class="text-neutral-600 text-sm leading-relaxed pl-8">
+            We welcome walk-in patients during clinic hours, though our daily appointment and walk-in cut-off is strictly at <strong>5:00 PM</strong>. To avoid waiting and secure your preferred doctor (Dr. Micah Redilla or Dr. Pauline Trinidad), booking online or texting us at <strong>(0976) 485 7648</strong> is recommended.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-12">
+        <a 
+          href="booking.html" 
+          class="btn-pill-primary px-8 py-3.5 text-sm font-bold inline-flex items-center gap-2">
+          <span>Book Your Appointment Today</span>
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. GLOBAL RICH FOOTER                                                     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-white border-t border-neutral-100 pt-16 pb-12 text-neutral-600 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-neutral-100">
+        
+        <!-- Col 1: Brand Info (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-neutral-500 text-xs leading-relaxed max-w-sm">
+            DentaCure Dental Clinic at Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union. Providing modern dentistry, braces, and cosmetic smile care.
+          </p>
+          <div class="pt-2 space-y-1">
+            <p class="text-xs text-neutral-400">Direct Appointments &amp; Mobile:</p>
+            <p class="text-xs font-bold text-neutral-900">(0976) 485 7648 • Landline: 072 6108 681</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-neutral-900 transition">Home Page</a></li>
+            <li><a href="services.html" class="hover:text-neutral-900 transition">Clinical Services</a></li>
+            <li><a href="dentists.html" class="hover:text-neutral-900 transition">Our Dentists</a></li>
+            <li><a href="before-after.html" class="hover:text-neutral-900 transition">Before &amp; After</a></li>
+            <li><a href="reviews.html" class="hover:text-neutral-900 transition">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="services.html#orthodontics" class="hover:text-neutral-900 transition">Orthodontic Braces</a></li>
+            <li><a href="services.html#pediatric" class="hover:text-neutral-900 transition">Pediatric Dentistry</a></li>
+            <li><a href="services.html#cosmetic" class="hover:text-neutral-900 transition">Cosmetic Veneers</a></li>
+            <li><a href="services.html#restorative" class="hover:text-neutral-900 transition">Root Canal &amp; Fillings</a></li>
+            <li><a href="booking.html" class="hover:text-neutral-900 transition">Book Online</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Clinic Location -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Clinic Location</h4>
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union, 2500
+          </p>
+          <p class="text-[11px] text-neutral-400">Landmarks: McArthur Highway, near ILAW ATBP., TESDA &amp; DMMSU.</p>
+          <a href="directions.html" class="inline-flex items-center gap-1 text-xs font-bold text-[#5F8239] hover:underline pt-1">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Google Map &amp; Directions</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Strip -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        <p>© 2026 DentaCure Dental Clinic. All Rights Reserved.</p>
+        <p>Mon–Sat: 9:00 AM – 5:30 PM | Sun: 1:00 PM – 5:00 PM (Cut-off: 5:00 PM)</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

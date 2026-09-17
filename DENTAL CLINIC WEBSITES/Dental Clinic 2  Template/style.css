@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Default: DentaCure Organic Green Palette (from user uploaded image 1) */
+  --color-primary: #37542B;
+  --color-primary-dark: #233B19;
+  --color-primary-light: #527440;
+  --color-accent: #4E7837;
+  --color-accent-soft: #EEF4EB;
+  --color-accent-border: #D8E5D3;
+  --color-accent-glow: rgba(78, 120, 55, 0.15);
+  --color-cream-bg: #FAF9F5;
+  --color-dark-container: #1A1A1A;
+  --color-card-dark: #242424;
+  --color-badge-bg: #E8EFE5;
+  --color-badge-text: #2C4820;
+  --brand-name: "DentaCure";
+  --brand-tagline: "YOUR SMILE OUR PRIORITY";
+}
+
+/* Tooth D' Care / Emerald Clinical Theme Preset (Calibrated to the 3D Video Palette) */
+[data-theme="dentiva"], [data-theme="teal"] {
+  --color-primary: #178782;
+  --color-primary-dark: #105E5A;
+  --color-primary-light: #229891;
+  --color-accent: #178782;
+  --color-accent-soft: #E6F4F4;
+  --color-accent-border: #C8E5E5;
+  --color-accent-glow: rgba(23, 135, 130, 0.2);
+  --color-cream-bg: #F4F9F9;
+  --color-dark-container: #132424;
+  --color-card-dark: #1C2B2B;
+  --color-badge-bg: #E6F4F4;
+  --color-badge-text: #135E5A;
+  --brand-name: "Tooth D' Care";
+  --brand-tagline: "ADVANCED DENTAL CLINIC";
+}
+
+*, *::before, *::after {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+p, .font-body, .prose, .text-neutral-500, .text-neutral-600 {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Theme accent text and backgrounds */
+.theme-accent {
+  color: var(--color-accent) !important;
+  transition: color 0.3s ease;
+}
+
+.theme-accent-bg {
+  background-color: var(--color-accent) !important;
+  transition: background-color 0.3s ease;
+}
+
+.theme-accent-soft-bg {
+  background-color: var(--color-accent-soft) !important;
+  border-color: var(--color-accent-border) !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-badge {
+  background-color: var(--color-badge-bg) !important;
+  color: var(--color-badge-text) !important;
+  transition: all 0.3s ease;
+}
+
+.theme-cta-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-primary-dark) 100%) !important;
+  transition: background 0.4s ease;
+}
+
+/* 3D Floating animation for typodont model */
+@keyframes floatTeeth {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+.animate-float-teeth {
+  animation: floatTeeth 5s ease-in-out infinite;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.08));
+}
+
+/* Pulsing ambient radial glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+}
+
+.ambient-glow {
+  background: radial-gradient(circle, var(--color-accent-glow) 0%, rgba(255,255,255,0) 70%);
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Card hover elevations */
+.card-hover-scale {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-scale:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.12);
+}
+
+/* Monochromatic to subtle color hover on doctor cards */
+.doctor-portrait {
+  filter: grayscale(85%) contrast(105%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.doctor-card:hover .doctor-portrait {
+  filter: grayscale(0%) contrast(100%);
+  transform: scale(1.03);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Active Nav link underline */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.25s ease, left 0.25s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Modal Backdrops */
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  background-color: rgba(15, 23, 42, 0.65);
+}
+
+/* Interactive Ripple / Pill Button */
+.btn-pill-primary {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px var(--color-accent-glow);
+}
+
+.btn-pill-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--color-accent-glow);
+  filter: brightness(1.05);
+}
+
+.btn-pill-primary:active {
+  transform: translateY(0);
+}

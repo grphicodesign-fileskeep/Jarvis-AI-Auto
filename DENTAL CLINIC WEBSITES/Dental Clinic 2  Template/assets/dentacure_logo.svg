@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 88" width="280" height="88" fill="none">
+  <!-- Tooth Icon Outline -->
+  <g transform="translate(6, 12)">
+    <!-- Elegant hand-drawn continuous line tooth matching DentaCure logo -->
+    <path d="M18,6 
+             C24,5 29,8 32,10 
+             C35,8 40,5 46,6 
+             C52,7 54,14 53,20 
+             C51,26 49,34 47,44 
+             C46,49 45,55 42,57 
+             C39,59 36,54 35,46 
+             C34,40 33,37 32,37 
+             C31,37 30,40 29,46 
+             C28,54 25,59 22,57 
+             C19,55 18,49 17,44 
+             C15,34 13,26 11,20 
+             C10,14 12,7 18,6 Z" 
+          stroke="#5F8239" 
+          stroke-width="2.6" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+  </g>
+
+  <!-- Wordmark: Denta (Dark Slate) + Cure (Olive Green) -->
+  <text x="68" y="47" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.02em">
+    <tspan fill="#222B38">Denta</tspan><tspan fill="#5F8239">Cure</tspan>
+  </text>
+
+  <!-- Subtitle: D E N T A L   C L I N I C -->
+  <text x="70" y="68" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#222B38" letter-spacing="0.38em">
+    DENTAL CLINIC
+  </text>
+</svg>

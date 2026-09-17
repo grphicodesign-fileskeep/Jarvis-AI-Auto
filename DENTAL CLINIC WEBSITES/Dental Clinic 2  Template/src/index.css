@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #37542B;
+  --color-primary-dark: #233B19;
+  --color-primary-light: #527440;
+  --color-accent: #4E7837;
+  --color-accent-soft: #EEF4EB;
+  --color-accent-border: #D8E5D3;
+  --color-accent-glow: rgba(78, 120, 55, 0.15);
+}
+
+[data-theme="dentiva"], [data-theme="teal"] {
+  --color-primary: #178782;
+  --color-primary-dark: #105E5A;
+  --color-primary-light: #229891;
+  --color-accent: #178782;
+  --color-accent-soft: #E6F4F4;
+  --color-accent-border: #C8E5E5;
+  --color-accent-glow: rgba(23, 135, 130, 0.22);
+}
+
+@keyframes floatTeeth {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+.animate-float-teeth {
+  animation: floatTeeth 5s ease-in-out infinite;
+}

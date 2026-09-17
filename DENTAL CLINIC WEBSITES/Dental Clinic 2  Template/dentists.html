@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dentacure">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Our Doctors &amp; Dental Surgeons — DentaCure Dental Clinic La Union</title>
+  <meta name="description" content="Meet Dr. Micah Redilla (Lead Dental Surgeon) and Dr. Pauline Trinidad (Cosmetic Dentist &amp; Smile Architect) at DentaCure Dental Clinic, Grand Plaza Building, Sevilla, San Fernando City.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              green: '#37542B',
+              olive: '#4E7837',
+              sage: '#82A769',
+              blue: '#178782', // Replaced blue with Video Oceanic Teal
+              teal: '#178782',
+              aqua: '#229891',
+              mint: '#6DC4C4',
+              dark: '#1A1A1A',
+              cardDark: '#242424',
+              cream: '#FAF9F5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased selection:bg-neutral-200 min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================================================= -->
+  <!-- 1. STICKY TOP NAVIGATION BAR                                              -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div id="navbar-logo-icon" class="flex items-center justify-center transition-transform group-hover:scale-105">
+          <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+        </div>
+      </a>
+
+      <!-- Centered Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-600">
+        <a href="index.html" class="nav-link hover:text-neutral-900 transition">Home</a>
+        <a href="services.html" class="nav-link hover:text-neutral-900 transition">Our Services</a>
+        <a href="dentists.html" class="nav-link text-neutral-900 font-bold border-b-2 border-[#5F8239] pb-1">Our Dentists</a>
+        <a href="before-after.html" class="nav-link hover:text-neutral-900 transition">Before &amp; After</a>
+        <a href="reviews.html" class="nav-link hover:text-neutral-900 transition">Reviews</a>
+        <a href="faq.html" class="nav-link hover:text-neutral-900 transition">FAQ</a>
+        <a href="directions.html" class="nav-link hover:text-neutral-900 flex items-center gap-1 font-semibold text-[#5F8239]">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Directions</span>
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <button id="theme-toggle-btn" 
+          class="hidden sm:flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 transition shadow-sm"
+          title="Toggle Theme">
+          <span class="w-2 h-2 rounded-full theme-accent-bg animate-pulse"></span>
+          <span id="theme-current-label">🌿 DentaCure Green</span>
+        </button>
+
+        <a href="booking.html" class="btn-pill-primary px-6 py-2.5 text-sm font-semibold tracking-wide inline-flex items-center justify-center">
+          Book Online
+        </a>
+
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-neutral-100 bg-white px-6 py-4 space-y-3 shadow-xl">
+      <a href="index.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Home</a>
+      <a href="services.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Services</a>
+      <a href="dentists.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">Our Dentists</a>
+      <a href="before-after.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Before &amp; After Transformations</a>
+      <a href="reviews.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Patient Reviews</a>
+      <a href="faq.html" class="mobile-nav-link block text-base font-medium text-neutral-600">FAQ</a>
+      <a href="directions.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">📍 Google Map &amp; Directions</a>
+      <a href="booking.html" class="mobile-nav-link block text-base font-bold text-neutral-900 bg-[#EBF3E4] px-3 py-2 rounded-xl">📅 Book Appointment Online</a>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO HEADER                                                            -->
+  <!-- ========================================================================= -->
+  <section class="relative pt-12 pb-14 bg-gradient-to-b from-[#FAF9F5] to-white border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-neutral-400 mb-4 uppercase tracking-wider">
+        <a href="index.html" class="hover:text-neutral-700 transition">Home</a>
+        <span>/</span>
+        <span class="theme-accent">Clinical Team</span>
+      </nav>
+
+      <div class="max-w-3xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3E4] border border-[#D5E6CA] text-[#426123] text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>Licensed Dental Clinicians &amp; Surgeons</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-[58px] font-extrabold tracking-tight text-neutral-900 leading-[1.12]">
+          Caring Hands, Proven Precision: <br>
+          <span class="theme-accent">Meet Our Doctors</span>
+        </h1>
+        <p class="text-neutral-500 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+          At DentaCure Dental Clinic, your smile is in the hands of dedicated practitioners with extensive post-graduate clinical training in oral surgery, modern orthodontics, and aesthetic smile architecture.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. DOCTOR PROFILES SECTION                                                -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <!-- Doctor 1: Dr. Micah Redilla -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-[#FAF9F5] border border-[#ECE7DE] rounded-3xl p-8 sm:p-12 shadow-sm">
+        
+        <!-- Doctor Image -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white group">
+            <img src="assets/dentist_micah_redilla.png" alt="Dr. Micah Redilla - Lead Dental Surgeon" class="w-full h-96 object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-neutral-100 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#5F8239]">Lead Clinician</span>
+                <p class="text-xs font-bold text-neutral-900">Dr. Micah Redilla</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-[#EBF3E4] text-[#37542B] text-[10px] font-bold">DMD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Bio & Credentials -->
+        <div class="lg:col-span-7 space-y-5">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-[#EBF3E4] text-[#426123] mb-2 uppercase tracking-wider">
+              Oral Surgery &amp; General Dentistry
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+              Dr. Micah Redilla
+            </h2>
+            <p class="text-sm font-semibold text-[#5F8239]">
+              Lead Dental Surgeon &amp; General Dental Practitioner
+            </p>
+          </div>
+
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            Dr. Micah Redilla serves as the primary surgical and restorative lead at DentaCure. Known for a remarkably gentle touch and calm demeanor, Dr. Redilla specializes in making apprehensive patients feel completely at ease during complex dental procedures.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-white border border-neutral-200">
+              <h4 class="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#5F8239]"></i>
+                <span>Clinical Specializations</span>
+              </h4>
+              <ul class="text-xs text-neutral-600 space-y-1">
+                <li>• Atraumatic Wisdom Tooth Odontectomy</li>
+                <li>• Endodontic Root Canal Therapy</li>
+                <li>• High-Precision Composite Tooth Bonding</li>
+                <li>• Preventive Oral Prophylaxis</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-neutral-200">
+              <h4 class="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i data-lucide="heart" class="w-4 h-4 text-[#5F8239]"></i>
+                <span>Patient Philosophy</span>
+              </h4>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                "Our clinic operates on the belief that preserving natural tooth structure with zero pain is the highest standard of dental healthcare."
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="booking.html" class="btn-pill-primary px-7 py-3 text-xs font-bold inline-flex items-center gap-2">
+              <span>Book Appointment with Dr. Redilla</span>
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Doctor 2: Dr. Pauline Trinidad -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-[#FAF9F5] border border-[#ECE7DE] rounded-3xl p-8 sm:p-12 shadow-sm">
+        
+        <!-- Doctor Bio & Credentials (Left on Desktop) -->
+        <div class="lg:col-span-7 space-y-5 order-last lg:order-first">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-[#EBF3E4] text-[#426123] mb-2 uppercase tracking-wider">
+              Aesthetic Makeovers &amp; Smile Architecture
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+              Dr. Pauline Trinidad
+            </h2>
+            <p class="text-sm font-semibold text-[#5F8239]">
+              Cosmetic Dentist &amp; Smile Architect • CODAC
+            </p>
+          </div>
+
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            With certified fellowship under <strong>CODAC (The Smile Architect)</strong>, Dr. Pauline Trinidad treats aesthetic dentistry as both medical science and high art. Dr. Trinidad crafts personalized smile designs considering tooth proportions, golden ratios, lip lines, and natural color gradients.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-white border border-neutral-200">
+              <h4 class="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-[#5F8239]"></i>
+                <span>Aesthetic Expertise</span>
+              </h4>
+              <ul class="text-xs text-neutral-600 space-y-1">
+                <li>• Hand-Sculpted Direct Composite Veneers</li>
+                <li>• Smile Line Alignment &amp; Diastema Closure</li>
+                <li>• In-Office High-Luster Laser Whitening</li>
+                <li>• Symmetrical Enamel Shaping &amp; Contouring</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-neutral-200">
+              <h4 class="text-xs font-bold text-neutral-900 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <i data-lucide="smile" class="w-4 h-4 text-[#5F8239]"></i>
+                <span>Aesthetic Credo</span>
+              </h4>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                "A confident, balanced smile changes how you carry yourself every day. We design smiles that look completely natural, bright, and uniquely yours."
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="booking.html" class="btn-pill-primary px-7 py-3 text-xs font-bold inline-flex items-center gap-2">
+              <span>Consult with Dr. Trinidad</span>
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </a>
+            <a href="before-after.html" class="px-6 py-3 rounded-full border border-neutral-300 hover:bg-white text-xs font-bold text-neutral-800 transition inline-flex items-center gap-2">
+              <span>View Smile Transformations</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Doctor Image (Right on Desktop) -->
+        <div class="lg:col-span-5 flex justify-center order-first lg:order-last">
+          <div class="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white group">
+            <img src="assets/dentist_pauline_trinidad.png" alt="Dr. Pauline Trinidad - Cosmetic Dentist &amp; Smile Architect" class="w-full h-96 object-cover object-top transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-neutral-100 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#5F8239]">CODAC Smile Architect</span>
+                <p class="text-xs font-bold text-neutral-900">Dr. Pauline Trinidad</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-[#EBF3E4] text-[#37542B] text-[10px] font-bold">Aesthetic Lead</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. STERILIZATION & CLINICAL SAFETY STANDARDS                               -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20 bg-[#FAF9F5] border-y border-[#ECE7DE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-4">
+          <span class="theme-badge px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            Patient Safety Protocol
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+            Hospital-Grade Autoclave Sterilization in Every Operatory
+          </h2>
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            At DentaCure, infection prevention is uncompromising. All surgical and restorative handpieces, burs, and dental instruments undergo strict multi-stage decontamination:
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-neutral-200">
+              <i data-lucide="shield-check" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-neutral-900">Class B Medical Vacuum Autoclave</h4>
+                <p class="text-xs text-neutral-500">Pressurized steam heat cycle eliminating 100% of bacterial and viral pathogens.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-neutral-200">
+              <i data-lucide="package-check" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-neutral-900">Individual Sealed Pouch Openings</h4>
+                <p class="text-xs text-neutral-500">Every instrument pack remains sealed with biological indicator strips until opened chairside in your presence.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-neutral-200">
+              <i data-lucide="sparkles" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-neutral-900">Surface Barrier Disinfection</h4>
+                <p class="text-xs text-neutral-500">Dental operatory chairs, suction lines, and light handles are chemically sanitized and sleeved between every patient visit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden shadow-xl border border-neutral-200 bg-white p-3">
+            <img src="assets/dentacure_clinic_interior.jpg" alt="DentaCure Sterilized Operatory Suite" class="w-full h-80 object-cover rounded-2xl">
+            <div class="p-4 flex items-center justify-between text-xs text-neutral-500">
+              <span>📍 Dual-Chair Operatory Suite • Unit 1, Grand Plaza</span>
+              <span class="font-bold text-[#5F8239]">Certified Clean</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. CHILD-FRIENDLY & FAMILY CARE HIGHLIGHT                                 -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <div class="lg:col-span-6 order-last lg:order-first">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <img src="assets/dentacure_patient_kids_glasses.jpg" alt="Dinosaur shades child patient at DentaCure" class="w-full h-64 object-cover rounded-3xl border border-neutral-200 shadow-md">
+              <div class="p-4 rounded-2xl bg-[#EBF3E4] text-[#37542B] text-xs">
+                <p class="font-bold">🦖 The "Dino Shades" Tradition</p>
+                <p class="text-[11px] text-[#4E7837] mt-0.5">Protects young eyes and transforms checkups into adventures.</p>
+              </div>
+            </div>
+            <div class="space-y-4 pt-6">
+              <img src="assets/dentacure_patient_family_reception.jpg" alt="Family dental visit at DentaCure reception" class="w-full h-64 object-cover rounded-3xl border border-neutral-200 shadow-md">
+              <div class="p-4 rounded-2xl bg-neutral-50 text-neutral-600 text-xs border border-neutral-100">
+                <p class="font-bold text-neutral-900">👨‍👩‍👧‍👦 Multi-Gen Family Care</p>
+                <p class="text-[11px] text-neutral-400 mt-0.5">Simultaneous checkups for parents and children.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-4">
+          <span class="theme-badge px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            Pediatric Dental Philosophy
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+            Building Positive Dental Memories for a Lifetime
+          </h2>
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            Childhood dental anxiety often stems from fear of the unknown. Our team uses "Tell-Show-Do" communication — explaining each step in playful terms before anything touches their teeth.
+          </p>
+          <ul class="space-y-2 text-xs sm:text-sm text-neutral-700">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#5F8239]"></i>
+              <span>Fun dinosaur shades that turn the operatory light into a spaceship game</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#5F8239]"></i>
+              <span>Non-stinging topical numbing gel before any procedure</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#5F8239]"></i>
+              <span>Patient bravery stickers and tooth-friendly rewards after every visit</span>
+            </li>
+          </ul>
+
+          <div class="pt-4">
+            <a href="booking.html" class="btn-pill-primary px-7 py-3 text-xs font-bold inline-flex items-center gap-2">
+              <span>Book Your Child's First Visit</span>
+              <i data-lucide="smile" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. GLOBAL RICH FOOTER                                                     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-white border-t border-neutral-100 pt-16 pb-12 text-neutral-600 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-neutral-100">
+        
+        <!-- Col 1: Brand Info (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-neutral-500 text-xs leading-relaxed max-w-sm">
+            DentaCure Dental Clinic is led by Dr. Micah Redilla and Dr. Pauline Trinidad, delivering evidence-based dentistry, aesthetic smile design, and painless surgical care in La Union.
+          </p>
+          <div class="pt-2 space-y-1">
+            <p class="text-xs text-neutral-400">Direct Appointments &amp; Mobile:</p>
+            <p class="text-xs font-bold text-neutral-900">(0976) 485 7648 • Landline: 072 6108 681</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-neutral-900 transition">Home Page</a></li>
+            <li><a href="services.html" class="hover:text-neutral-900 transition">Clinical Services</a></li>
+            <li><a href="dentists.html" class="font-semibold text-[#5F8239]">Our Dentists</a></li>
+            <li><a href="before-after.html" class="hover:text-neutral-900 transition">Before &amp; After</a></li>
+            <li><a href="reviews.html" class="hover:text-neutral-900 transition">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Treatments -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Treatments</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="services.html#orthodontics" class="hover:text-neutral-900 transition">Orthodontics &amp; Braces</a></li>
+            <li><a href="services.html#pediatric" class="hover:text-neutral-900 transition">Pediatric Care</a></li>
+            <li><a href="services.html#cosmetic" class="hover:text-neutral-900 transition">Cosmetic Veneers</a></li>
+            <li><a href="services.html#restorative" class="hover:text-neutral-900 transition">Root Canal &amp; Fillings</a></li>
+            <li><a href="booking.html" class="hover:text-neutral-900 transition">Book Online</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Clinic Location -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Clinic Location</h4>
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union, 2500
+          </p>
+          <p class="text-[11px] text-neutral-400">Landmarks: McArthur Highway, near ILAW ATBP., TESDA &amp; DMMSU.</p>
+          <a href="directions.html" class="inline-flex items-center gap-1 text-xs font-bold text-[#5F8239] hover:underline pt-1">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Google Map &amp; Directions</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Strip -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        <p>© 2026 DentaCure Dental Clinic. All Rights Reserved.</p>
+        <p>Mon–Sat: 9:00 AM – 5:30 PM | Sun: 1:00 PM – 5:00 PM (Cut-off: 5:00 PM)</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dentacure">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Services &amp; Treatments — DentaCure Dental Clinic La Union</title>
+  <meta name="description" content="Comprehensive orthodontic, pediatric, cosmetic, restorative, and surgical dental treatments at DentaCure Dental Clinic, Grand Plaza Building, Sevilla, San Fernando City, La Union.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              green: '#37542B',
+              olive: '#4E7837',
+              sage: '#82A769',
+              blue: '#178782', // Replaced blue with Video Oceanic Teal
+              teal: '#178782',
+              aqua: '#229891',
+              mint: '#6DC4C4',
+              dark: '#1A1A1A',
+              cardDark: '#242424',
+              cream: '#FAF9F5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-[#1A1A1A] antialiased selection:bg-neutral-200 min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================================================= -->
+  <!-- 1. STICKY TOP NAVIGATION BAR                                              -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div id="navbar-logo-icon" class="flex items-center justify-center transition-transform group-hover:scale-105">
+          <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+        </div>
+      </a>
+
+      <!-- Centered Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-600">
+        <a href="index.html" class="nav-link hover:text-neutral-900 transition">Home</a>
+        <a href="services.html" class="nav-link text-neutral-900 font-bold border-b-2 border-[#5F8239] pb-1">Our Services</a>
+        <a href="dentists.html" class="nav-link hover:text-neutral-900 transition">Our Dentists</a>
+        <a href="before-after.html" class="nav-link hover:text-neutral-900 transition">Before &amp; After</a>
+        <a href="reviews.html" class="nav-link hover:text-neutral-900 transition">Reviews</a>
+        <a href="faq.html" class="nav-link hover:text-neutral-900 transition">FAQ</a>
+        <a href="directions.html" class="nav-link hover:text-neutral-900 flex items-center gap-1 font-semibold text-[#5F8239]">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          <span>Directions</span>
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <button id="theme-toggle-btn" 
+          class="hidden sm:flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 transition shadow-sm"
+          title="Toggle Theme">
+          <span class="w-2 h-2 rounded-full theme-accent-bg animate-pulse"></span>
+          <span id="theme-current-label">🌿 DentaCure Green</span>
+        </button>
+
+        <a href="booking.html" class="btn-pill-primary px-6 py-2.5 text-sm font-semibold tracking-wide inline-flex items-center justify-center">
+          Book Online
+        </a>
+
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-neutral-100 bg-white px-6 py-4 space-y-3 shadow-xl">
+      <a href="index.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Home</a>
+      <a href="services.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">Our Services</a>
+      <a href="dentists.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Our Dentists</a>
+      <a href="before-after.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Before &amp; After Transformations</a>
+      <a href="reviews.html" class="mobile-nav-link block text-base font-medium text-neutral-600">Patient Reviews</a>
+      <a href="faq.html" class="mobile-nav-link block text-base font-medium text-neutral-600">FAQ</a>
+      <a href="directions.html" class="mobile-nav-link block text-base font-bold text-[#5F8239]">📍 Google Map &amp; Directions</a>
+      <a href="booking.html" class="mobile-nav-link block text-base font-bold text-neutral-900 bg-[#EBF3E4] px-3 py-2 rounded-xl">📅 Book Appointment Online</a>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO HEADER                                                            -->
+  <!-- ========================================================================= -->
+  <section class="relative pt-12 pb-14 bg-gradient-to-b from-[#FAF9F5] to-white border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-neutral-400 mb-4 uppercase tracking-wider">
+        <a href="index.html" class="hover:text-neutral-700 transition">Home</a>
+        <span>/</span>
+        <span class="theme-accent">Clinical Services</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3E4] border border-[#D5E6CA] text-[#426123] text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Full-Spectrum Dental Healthcare</span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-[58px] font-extrabold tracking-tight text-neutral-900 leading-[1.12]">
+            Advanced Clinical Care for <br class="hidden sm:inline">
+            <span class="theme-accent">Every Stage of Your Smile</span>
+          </h1>
+          <p class="text-neutral-500 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+            From precision orthodontic alignment and child-friendly pediatric care to transformative cosmetic veneers and surgical extractions, our clinic provides gentle, hospital-grade dental services tailored to your comfort.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-4">
+            <a href="booking.html" class="btn-pill-primary px-7 py-3 text-sm font-bold inline-flex items-center gap-2">
+              <span>Book a Consultation</span>
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+            </a>
+            <a href="tel:09764857648" class="px-6 py-3 rounded-full border border-neutral-200 bg-white hover:bg-neutral-50 text-sm font-semibold text-neutral-800 transition inline-flex items-center gap-2 shadow-sm">
+              <i data-lucide="phone" class="w-4 h-4 text-[#5F8239]"></i>
+              <span>(0976) 485 7648</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Clinic Feature Pill Card -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-neutral-100 group">
+            <img src="assets/dentacure_clinic_interior.jpg" alt="DentaCure Modern Operatory" class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="text-xs font-bold uppercase tracking-widest text-[#A6C887]">Grand Plaza Operatory</span>
+              <h3 class="text-lg font-bold">Dual-Chair Modern Surgical Suite</h3>
+              <p class="text-xs text-neutral-300 mt-1">Class B Hospital Autoclave Sterilization • Ergonomic Patient Seating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. DETAILED 6 CLINICAL PILLARS                                            -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <!-- Service 1: Orthodontics & Braces -->
+      <div id="orthodontics" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold text-lg">
+            01
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+            Orthodontics &amp; Teeth Alignment
+          </h2>
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            Correct crooked teeth, spacing, overbites, and severe crowding with modern orthodontic solutions. We formulate computerized treatment plans using 3D typodont modeling for faster alignment and minimal discomfort.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Self-Ligating &amp; Traditional Metal Braces:</strong> Low-friction brackets for smooth tooth movement.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Ceramic Aesthetic Braces:</strong> Tooth-colored brackets that blend with your natural enamel.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Flexible Payment Terms:</strong> Low initial downpayment and easy monthly adjustment fees.</span>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center gap-4">
+            <a href="booking.html" class="btn-pill-primary px-6 py-2.5 text-xs font-bold">
+              Book Orthodontic Consultation
+            </a>
+            <span class="text-xs text-neutral-400">Includes Free Diagnostic Assessment</span>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden border border-neutral-200 shadow-lg bg-neutral-50 p-3">
+            <img src="assets/dental_braces_model_3d.jpg" alt="Orthodontic 3D Typodont Model" class="w-full h-80 object-cover rounded-2xl">
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-neutral-100">
+
+      <!-- Service 2: Pediatric Dentistry -->
+      <div id="pediatric" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 order-last lg:order-first">
+          <div class="grid grid-cols-2 gap-4">
+            <img src="assets/dentacure_patient_kids_glasses.jpg" alt="Toddler with Dinosaur Shades at DentaCure" class="w-full h-72 object-cover rounded-3xl border border-neutral-200 shadow-md">
+            <img src="assets/dentacure_patient_mother_daughter.jpg" alt="Compassionate pediatric examination" class="w-full h-72 object-cover rounded-3xl border border-neutral-200 shadow-md">
+          </div>
+        </div>
+        <div class="lg:col-span-6 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold text-lg">
+            02
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+            Pediatric &amp; Fear-Free Child Dental Care
+          </h2>
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            Visiting the dentist shouldn't be scary! At DentaCure, we make every child feel like a superhero. With our famous dinosaur sunglasses, gentle chairside explanations, and positive reinforcement, kids leave smiling and eager to come back.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Dino Shades Protection:</strong> Fun eye shields that protect young eyes from bright dental LEDs.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Fluoride Varnish &amp; Pit/Fissure Sealants:</strong> Proven cavity shields for primary and permanent molars.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Gentle Milk Tooth Extractions:</strong> Pain-free local anesthesia for smooth transition to permanent teeth.</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <a href="booking.html" class="btn-pill-primary px-6 py-2.5 text-xs font-bold">
+              Schedule Your Child's Dental Visit
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-neutral-100">
+
+      <!-- Service 3: Restorative Dentistry & Composite Fillings -->
+      <div id="restorative" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold text-lg">
+            03
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+            Restorative Dentistry &amp; Tooth Reconstruction
+          </h2>
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            Stop tooth decay in its tracks while preserving your natural tooth structure. Our high-grade micro-hybrid composite resins are color-matched precisely to your surrounding enamel for invisible, durable restorations.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Anterior Tooth Direct Bonding:</strong> Rebuild fractured incisors, close gaps, and restore chewing edges.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Composite Tooth Fillings:</strong> Mercury-free, aesthetic tooth-colored restorations for molars.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Endodontic Root Canal Therapy:</strong> Relieve severe tooth pain and preserve your natural tooth root.</span>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center gap-4">
+            <a href="before-after.html" class="px-6 py-2.5 rounded-full border border-neutral-300 hover:bg-neutral-50 text-xs font-bold text-neutral-800 transition inline-flex items-center gap-1.5">
+              <span>See Before &amp; After Cases</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden border border-neutral-200 shadow-lg bg-neutral-50 p-3">
+            <img src="assets/dentacure_before_after_smile.jpg" alt="Anterior Composite Tooth Restoration Before and After" class="w-full h-80 object-cover rounded-2xl">
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-neutral-100">
+
+      <!-- Service 4: Cosmetic Dentistry & Veneers -->
+      <div id="cosmetic" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 order-last lg:order-first">
+          <div class="rounded-3xl overflow-hidden border border-neutral-200 shadow-lg bg-neutral-50 p-3">
+            <img src="assets/dentist_pauline_trinidad.png" alt="Dr. Pauline Trinidad - Cosmetic Dentist &amp; Smile Architect" class="w-full h-80 object-cover rounded-2xl">
+          </div>
+        </div>
+        <div class="lg:col-span-6 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold text-lg">
+            04
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+            Cosmetic Dentistry &amp; Smile Makeovers
+          </h2>
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            Crafted under the artistic precision of <strong>Dr. Pauline Trinidad</strong> (CODAC The Smile Architect), our cosmetic treatments design photogenic smiles tailored to your unique facial contours and skin tone.
+          </p>
+          <div class="space-y-2.5 pt-2">
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Direct &amp; Indirect Composite Veneers:</strong> Instant Hollywood smile transformation in as little as one visit.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>In-Office Laser Teeth Whitening:</strong> Brighten your enamel by up to 6–8 shades in 45 minutes safely.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-[#5F8239] shrink-0 mt-0.5"></i>
+              <span class="text-sm text-neutral-700"><strong>Gingival Gum Contouring:</strong> Rebalance gummy smiles for symmetrical aesthetics.</span>
+            </div>
+          </div>
+          <div class="pt-4">
+            <a href="booking.html" class="btn-pill-primary px-6 py-2.5 text-xs font-bold">
+              Consult with Dr. Pauline Trinidad
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-neutral-100">
+
+      <!-- Service 5 & 6: Preventive Prophylaxis and Oral Surgery -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Pillar 5: Preventive Hygiene -->
+        <div class="bg-[#FAF9F5] border border-[#ECE7DE] rounded-3xl p-8 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-base text-[#5F8239]">
+              05
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900">Preventive Care &amp; Deep Oral Prophylaxis</h3>
+            <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+              Maintain optimal oral health with ultrasonic plaque and tartar removal, dental polishing, and periodontal pocket evaluations. Recommended every 6 months to prevent gingivitis and bone loss.
+            </p>
+            <ul class="space-y-2 text-xs text-neutral-600">
+              <li class="flex items-center gap-2">✓ Ultrasonic gentle scaler technology</li>
+              <li class="flex items-center gap-2">✓ Air polishing for coffee, tea &amp; smoking stains</li>
+              <li class="flex items-center gap-2">✓ Personalized at-home oral hygiene regimen</li>
+            </ul>
+          </div>
+          <a href="booking.html" class="btn-pill-primary w-full py-2.5 text-xs font-bold text-center block">
+            Book Routine Cleaning
+          </a>
+        </div>
+
+        <!-- Pillar 6: Oral Surgery & Wisdom Teeth -->
+        <div class="bg-[#FAF9F5] border border-[#ECE7DE] rounded-3xl p-8 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-2xl bg-white shadow-sm flex items-center justify-center font-bold text-base text-[#5F8239]">
+              06
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900">Oral Surgery &amp; Wisdom Tooth Removal</h3>
+            <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+              Led by <strong>Dr. Micah Redilla</strong>, our surgical extractions prioritize atraumatic technique, minimal swelling, and rapid healing protocols for impacted third molars and severely compromised teeth.
+            </p>
+            <ul class="space-y-2 text-xs text-neutral-600">
+              <li class="flex items-center gap-2">✓ Impacted wisdom tooth odontectomy</li>
+              <li class="flex items-center gap-2">✓ Pre-orthodontic premolar extractions</li>
+              <li class="flex items-center gap-2">✓ Complete post-op recovery care kit &amp; antibiotics</li>
+            </ul>
+          </div>
+          <a href="booking.html" class="btn-pill-primary w-full py-2.5 text-xs font-bold text-center block">
+            Consult Dr. Micah Redilla
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. TRANSPARENT PRICING & PAYMENT OPTIONS                                  -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20 bg-[#FAF9F5] border-t border-[#ECE7DE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <span class="theme-badge px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+          Fair &amp; Transparent
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          Treatment Investment Guidelines
+        </h2>
+        <p class="text-neutral-500 text-xs sm:text-sm">
+          No hidden fees or unexpected charges. Every treatment is clearly explained with transparent quotes prior to starting.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Plan 1: Routine & Preventive -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200 shadow-sm space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <span class="text-xs font-bold text-[#5F8239] uppercase tracking-wider">Preventive Care</span>
+            <h3 class="text-xl font-bold text-neutral-900">Checkup &amp; Cleaning</h3>
+            <p class="text-neutral-500 text-xs leading-relaxed">
+              Essential biannual maintenance to prevent decay and maintain gum vitality.
+            </p>
+            <div class="pt-2 border-t border-neutral-100 space-y-2.5 text-xs text-neutral-600">
+              <div class="flex justify-between py-1 border-b border-neutral-50">
+                <span>Comprehensive Oral Exam</span>
+                <span class="font-bold text-neutral-900">₱500 – ₱800</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-50">
+                <span>Ultrasonic Dental Cleaning</span>
+                <span class="font-bold text-neutral-900">₱1,200 – ₱2,000</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-50">
+                <span>Pediatric Fluoride Varnish</span>
+                <span class="font-bold text-neutral-900">₱800 – ₱1,200</span>
+              </div>
+              <div class="flex justify-between py-1">
+                <span>Pit &amp; Fissure Sealant (per tooth)</span>
+                <span class="font-bold text-neutral-900">₱700 – ₱1,000</span>
+              </div>
+            </div>
+          </div>
+          <a href="booking.html" class="btn-pill-primary w-full py-2.5 text-xs font-bold text-center block">
+            Book Routine Visit
+          </a>
+        </div>
+
+        <!-- Plan 2: Restorative & Surgical (Featured) -->
+        <div class="bg-[#1A1A1A] text-white rounded-3xl p-6 sm:p-8 border border-neutral-800 shadow-xl space-y-6 flex flex-col justify-between relative">
+          <div class="absolute -top-3 right-6 bg-[#5F8239] text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+            Most Popular
+          </div>
+          <div class="space-y-4">
+            <span class="text-xs font-bold text-[#A6C887] uppercase tracking-wider">Restorative Care</span>
+            <h3 class="text-xl font-bold text-white">Fillings &amp; Surgery</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed">
+              Tooth preservation and emergency surgical care with hospital-grade anesthesia.
+            </p>
+            <div class="pt-2 border-t border-neutral-800 space-y-2.5 text-xs text-neutral-300">
+              <div class="flex justify-between py-1 border-b border-neutral-800">
+                <span>Composite Tooth Filling (per surface)</span>
+                <span class="font-bold text-white">₱1,000 – ₱1,800</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-800">
+                <span>Anterior Aesthetic Reconstruction</span>
+                <span class="font-bold text-white">₱1,800 – ₱3,500</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-800">
+                <span>Routine Tooth Extraction</span>
+                <span class="font-bold text-white">₱1,000 – ₱2,000</span>
+              </div>
+              <div class="flex justify-between py-1">
+                <span>Impacted Wisdom Tooth Surgery</span>
+                <span class="font-bold text-white">₱6,000 – ₱12,000</span>
+              </div>
+            </div>
+          </div>
+          <a href="booking.html" class="w-full py-2.5 text-xs font-bold text-center block rounded-full bg-[#5F8239] text-white hover:bg-[#4E6D2D] transition">
+            Book Treatment
+          </a>
+        </div>
+
+        <!-- Plan 3: Orthodontics & Aesthetics -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200 shadow-sm space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <span class="text-xs font-bold text-[#5F8239] uppercase tracking-wider">Aesthetic &amp; Braces</span>
+            <h3 class="text-xl font-bold text-neutral-900">Orthodontics &amp; Veneers</h3>
+            <p class="text-neutral-500 text-xs leading-relaxed">
+              Transformative smile makeovers with flexible installment payment structures.
+            </p>
+            <div class="pt-2 border-t border-neutral-100 space-y-2.5 text-xs text-neutral-600">
+              <div class="flex justify-between py-1 border-b border-neutral-50">
+                <span>Metal Braces (Full Package)</span>
+                <span class="font-bold text-neutral-900">From ₱35,000</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-50">
+                <span>Monthly Braces Adjustment</span>
+                <span class="font-bold text-neutral-900">₱1,000 – ₱1,500</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-50">
+                <span>Direct Composite Veneer (per tooth)</span>
+                <span class="font-bold text-neutral-900">₱2,500 – ₱4,500</span>
+              </div>
+              <div class="flex justify-between py-1">
+                <span>In-Office Laser Teeth Whitening</span>
+                <span class="font-bold text-neutral-900">₱7,500 – ₱12,000</span>
+              </div>
+            </div>
+          </div>
+          <a href="booking.html" class="btn-pill-primary w-full py-2.5 text-xs font-bold text-center block">
+            Ask for Installment Plan
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Payment Modes Strip -->
+      <div class="mt-10 p-6 rounded-2xl bg-white border border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-[#EBF3E4] text-[#5F8239] flex items-center justify-center font-bold">
+            💳
+          </div>
+          <span>Accepted Payment Methods: <strong>Cash, GCash, Maya, Bank Transfer (BDO, BPI), and Major Credit Cards</strong></span>
+        </div>
+        <a href="faq.html" class="font-bold text-[#5F8239] hover:underline flex items-center gap-1">
+          <span>Read Payment &amp; HMO FAQ</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. APPOINTMENT RESERVATION CALLOUT                                         -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-[#37542B] to-[#4E7837] rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="space-y-3 max-w-xl">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#C2DEAC]">Ready For Your Visit?</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+            Schedule Your Treatment Online or Inquire via WhatsApp
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-200 leading-relaxed">
+            Convenient appointment slots available Monday to Saturday (9:00 AM – 5:30 PM) and Sunday (1:00 PM – 5:00 PM). Daily cut-off for bookings is 5:00 PM.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+          <a href="booking.html" class="px-8 py-3.5 rounded-full bg-white text-[#37542B] font-bold text-sm hover:bg-neutral-100 transition shadow-lg text-center">
+            Book Appointment
+          </a>
+          <a href="tel:09764857648" class="px-6 py-3.5 rounded-full border border-white/30 text-white font-bold text-sm hover:bg-white/10 transition text-center flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>(0976) 485 7648</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. GLOBAL RICH FOOTER                                                     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-white border-t border-neutral-100 pt-16 pb-12 text-neutral-600 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-neutral-100">
+        
+        <!-- Col 1: Brand Info (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/dentacure_logo.svg" alt="DentaCure Dental Clinic" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-neutral-500 text-xs leading-relaxed max-w-sm">
+            DentaCure Dental Clinic provides modern orthodontic braces, pediatric dentistry, cosmetic smile transformations, and restorative dental surgery in San Fernando City, La Union.
+          </p>
+          <div class="pt-2 space-y-1">
+            <p class="text-xs text-neutral-400">Direct Appointments &amp; Mobile:</p>
+            <p class="text-xs font-bold text-neutral-900">(0976) 485 7648 • Landline: 072 6108 681</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-neutral-900 transition">Home Page</a></li>
+            <li><a href="services.html" class="font-semibold text-[#5F8239]">Clinical Services</a></li>
+            <li><a href="dentists.html" class="hover:text-neutral-900 transition">Our Dentists</a></li>
+            <li><a href="before-after.html" class="hover:text-neutral-900 transition">Before &amp; After</a></li>
+            <li><a href="reviews.html" class="hover:text-neutral-900 transition">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services Links -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Featured Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#orthodontics" class="hover:text-neutral-900 transition">Orthodontic Braces</a></li>
+            <li><a href="#pediatric" class="hover:text-neutral-900 transition">Pediatric Dentistry</a></li>
+            <li><a href="#restorative" class="hover:text-neutral-900 transition">Composite Fillings</a></li>
+            <li><a href="#cosmetic" class="hover:text-neutral-900 transition">Cosmetic Veneers</a></li>
+            <li><a href="booking.html" class="hover:text-neutral-900 transition">Book Online</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Location & Operating Hours -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-neutral-900 text-xs uppercase tracking-wider">Clinic Location</h4>
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            2nd Floor, Unit 1, Grand Plaza Building, Brgy. Sevilla, San Fernando City, La Union, 2500
+          </p>
+          <p class="text-[11px] text-neutral-400">Landmarks: McArthur Highway, near ILAW ATBP., TESDA &amp; DMMSU.</p>
+          <a href="directions.html" class="inline-flex items-center gap-1 text-xs font-bold text-[#5F8239] hover:underline pt-1">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Google Map &amp; Directions</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Strip -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        <p>© 2026 DentaCure Dental Clinic. All Rights Reserved.</p>
+        <p>Mon–Sat: 9:00 AM – 5:30 PM | Sun: 1:00 PM – 5:00 PM (Cut-off: 5:00 PM)</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
